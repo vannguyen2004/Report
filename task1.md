@@ -180,7 +180,7 @@ _Ưu điểm của Email Relay_:
 
 Quá trình hoạt động của SSL bao gồm 2 phase: SSL handshake và SSL Transfer
 
-Phase 1: Gửi hello và trao đổi khoá để xác thực với CA để bắt đầu thiết lập kết nối ( Sử mã hóa bất đối xứng)
+Phase 1: Gửi hello và trao đổi khoá để xác thực với CA để bắt đầu thiết lập kết nối ( Sử dụng mã hóa bất đối xứng)
 
 Phase 2 : Đây là quá trình trao đổi dữ liệu của hai hệ thống. Lúc này sẽ sử dụng mã hóa đối xứng dùng Session Key để mã hóa và giải mã
 
