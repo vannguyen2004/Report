@@ -154,7 +154,7 @@ Outgoing Mail Server: Sử lý và gửi đi các email từ người gửi tớ
 
 Incoming Mail Server: Hoạt động dựa trên giao thức (IMAP và POP3): Nhiệm vụ của Incoming Mail Server là lưu trữ các email đến và cho phép người nhận truy cập vào chúng bao gồm các hoạt động như sau: Nhận và lưu trữ thư từ Outgoing Server sau đó gửi thư về máy khách
 
-\* Sự khác nhau giữa 3 giao thức nhận Mail IMAP và POP3
+\* Sự khác nhau giữa 2 giao thức nhận Mail IMAP và POP3
 
 \- IMAP (143 or Secure 993): tạo bảng sao thư cho phép user lấy thư về. Cho phép người dùng đồng bộ thư bằng cách tạo ra bảng sao, tuy nhiên gây tiêu hao về vấn đề bộ nhớ
 
