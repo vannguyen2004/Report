@@ -28,7 +28,7 @@
 
 \+ Hổ trợ 24/7: Cung cấp hổ trợ các sự cố phần cứng hoặc phần mềm nhanh chóng
 
-2 VPS
+2\. VPS
 
 Khái niệm về VPS (Virtual Private Server): là một dạng máy chủ ảo được xây dựng trên nền máy chủ vật lí. Được cài đặt bằng cách phân chia một máy chủ vật lí thành nhiều máy chủ ảo khác nhau ( như CPU, RAM,…). Các VPS sẽ tách biệt với nhau trên máy chủ vật lí. Có 2 loại ảo hóa phổ biến là Virtual Machine và Containter
 
