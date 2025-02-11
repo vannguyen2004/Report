@@ -64,6 +64,9 @@
 
 **Nginx** là một máy chủ web mã nguồn mở, và **Nginx Reverse Proxy** là một tính năng cho phép Nginx hoạt động như một cầu nối giữa client và máy chủ backend. Thay vì kết nối trực tiếp với backend, client sẽ gửi yêu cầu đến Nginx, và Nginx sẽ chuyển tiếp yêu cầu đến backend thích hợp.
 
+![673c413af7c9e8a1b4d94709_61ee501466af465f016c81b6_Proxy20vs 203](https://github.com/user-attachments/assets/31f4e91b-27eb-48b4-810d-304d13b39db0)
+
+
 #### Một số thuật toán cân bằng tải phổ biến:
 - **Round Robin**: Lần lượt chuyển các yêu cầu đến các máy chủ theo thứ tự tuần hoàn.
 - **Weighted Round Robin**: Một biến thể của Round Robin, trong đó mỗi máy chủ được gán một trọng số khác nhau tùy thuộc vào năng lực xử lý.
