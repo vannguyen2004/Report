@@ -1,59 +1,83 @@
-### Load Average là gì? Kiểm tra chỉ báo trong lệnh top ###
-**Load Average**: là chỉ số dùng để đo lường mức tải trung bình của hệ thống trong một khoản thời gian nhất định (1, 5, 15 phút). Load Average giúp phát hiện mức tải của hệ thống để có những hành động xử lí kịp thời.
-Đọc và đánh giá chỉ số Load Average
-  + Load Average <= số core, bình thường
-  + Load Average > số core, đang bị tải cao, giảm hiệu suất
-  + Load Average gấp đôi số core, quá tải nghiêm trong cần được can thiệp ngay
-    
-**Chỉ báo trong lệnh top**:
+### Load Average là gì? Kiểm tra chỉ báo trong lệnh `top`
+
+**Load Average** là chỉ số dùng để đo lường mức tải trung bình của hệ thống trong ba khoảng thời gian: 1, 5 và 15 phút. Chỉ số này giúp phát hiện mức độ tải của hệ thống và đưa ra các hành động xử lý kịp thời.
+
+#### Đọc và đánh giá chỉ số Load Average:
+- **Load Average <= số core**: Hệ thống hoạt động bình thường.
+- **Load Average > số core**: Hệ thống đang bị tải cao, hiệu suất có thể giảm.
+- **Load Average gấp đôi số core**: Hệ thống quá tải nghiêm trọng, cần can thiệp ngay.
+
+---
+
+#### **Chỉ báo trong lệnh `top`:**
+
 ![Screenshot 2025-02-11 142454](https://github.com/user-attachments/assets/3e4fae3b-a930-4f8c-af84-1efc54c9147a)
 
-phần header:
-  + Thời gian hiện tại: **14:24:51**
-  + Trạng thái: **up**
-  + Số người dùng đang đăng nhập: **1 user**
-  + load average: **0.00**,**0.00**,**0.00** tương ứng thời tải lần lượt trong 1, 5, và 15 phút
-tasks: Số lượng các process
-  + Total **95**
-  + Running **1**
-  + Sleeping **94**
-  + Stopped, Zombie (dừng và đóng băng).
-Cpu(s)
-  + us: Tỷ lệ phần trăm CPU đang được sử dụng bởi các tiến trình người dùng 
-  + sy: Tỷ lệ phần trăm CPU đang được sử dụng bởi các tiến trình hệ thống
-  + ni: Tỷ lệ phần trăm CPU dành cho các tiến trình có mức độ ưu tiên
-  + id: Tỷ lệ CPU ở trạng thái không hoạt động 
-  + wa: Tỷ lệ phần trăm CPU đang đợi I/O
-  + hi: Tỷ lệ phần trăm CPU dành thời gian ngắt phần cứng
-  + si: Tỷ lệ phần trăm CPU dành thời gian ngắt phần 
-  + st: Tỷ lệ phần trăm CPU bị "đánh cắp" bởi máy ảo (stolen).
-Memory: bao gồm (Tổng dung lượng  bộ nhớ, Dung lượng bộ nhớ đang sử dụng, Dung lượng còn trống, bộ nhớ đệm, bộ nhớ cached)
-SWAP (Bộ nhớ được hoán đổi từ disk thành memory): bao gồm Total, Free và Used và aval Memory)
-Chi tiết các Process:
-  + PID: mã tiến trình sẽ không có 2 tiến trình có cùng PIP
-  + USER: Tên người tạo tiến trình
-  + PR: Mức độ ưu tiên tiến trình
-  + Giá trị ưu tiên
-  + VIRT: Dung lượng bộ nhớ ảo mà tiến trình sử dụng
-  + RES: Dung lượng bộ nhớ vật lí mà tiến trình đang sử dụng
-  + SHR: Dung lượng bộ nhớ chia sẻ
-  + S: Trạng thái của tiến trình (Running, Sleeping, Zombie...).
-  + %CPU: Tỷ lệ phần trăm CPU mà tiến trình đang sử dụng.
-  + %MEM: Tỷ lệ phần trăm bộ nhớ mà tiến trình đang sử dụng.
-  + TIME+: Thời gian tổng cộng mà tiến trình đã chạy.
-  + COMMAND: tên tiến
-***Ngoài top thì có lệnh có lệnh uptime để xem load average***
-### Nginx Reverse Proxy là gì, tác dụng của Nginx Reverse Proxy cho Apache ###
-Nginx: là máy chủ Web mã nguồn mỡ và Nginx Reverse là một tính năng của Nginx cho phép nó hoạt động như một cầu nối giữa client và máy chủ backend. Thay vì kết nối trực tiếp với backend, client gửi yêu cầu đến Nginx và Nginx sẽ chuyển tiếp yêu cầu đến back end thích hợp.
-Lợi ích của reverse proxy:
-  + Cải thiện hiệu xuất: Nhờ cache, nén dữ liệu và giảm tải cho backend.
-  + Bảo mật: Ẩn thông tin của backend, tránh được các cuộc tấng công trực tiếp.
-  + Cân bằng tải: Phân phối lưu lượng đến nhiều máy chủ backend.
-  + Đơn giản hóa cấu hình SSL/TLS: Quản lí mã hóa tập trung tại Nginx.
-Một số thuật toán cân bằng phổ biến:
-  + Round Robin: Lần lượt chuyển các yêu cầu đến những máy chủ theo thứ tự tuần hoàn.
-  +  Weighted Round Robin: Một biến thể của Round Robin, trong đó mỗi máy chủ được gán một trọng số khác nhau dựa trên năng lực xử lý của chúng.
-  + Least Connections: Máy chủ có ít kết nối đang mở nhất sẽ được chọn để xử lý yêu cầu kế tiếp.
-  + Least Response Time: Yêu cầu sẽ được gửi đến máy chủ có thời gian đáp ứng nhanh nhất
-  + Dựa trên địa chỉ IP của client để phân phối yêu cầu tới cùng một máy chủ.
-  + URL Hash: Tương tự IP Hash nhưng sử dụng URL của yêu cầu để xác định máy chủ thích hợp.
+**Phần header:**
+- **Thời gian hiện tại**: **14:24:51**
+- **Trạng thái**: **up**
+- **Số người dùng đang đăng nhập**: **1 user**
+- **Load Average**: **0.00**, **0.00**, **0.00** (tương ứng với thời gian tải trong 1, 5, và 15 phút)
+
+**Tasks**: Số lượng các process
+- **Total**: **95**
+- **Running**: **1**
+- **Sleeping**: **94**
+- **Stopped, Zombie**: Dừng và đóng băng.
+
+**Cpu(s):**
+- **us**: Tỷ lệ phần trăm CPU đang được sử dụng bởi các tiến trình người dùng.
+- **sy**: Tỷ lệ phần trăm CPU đang được sử dụng bởi các tiến trình hệ thống.
+- **ni**: Tỷ lệ phần trăm CPU dành cho các tiến trình có mức độ ưu tiên.
+- **id**: Tỷ lệ CPU ở trạng thái không hoạt động.
+- **wa**: Tỷ lệ phần trăm CPU đang đợi I/O.
+- **hi**: Tỷ lệ phần trăm CPU dành thời gian ngắt phần cứng.
+- **si**: Tỷ lệ phần trăm CPU dành thời gian ngắt phần mềm.
+- **st**: Tỷ lệ phần trăm CPU bị "đánh cắp" bởi máy ảo (stolen).
+
+**Memory:**
+- Bao gồm tổng dung lượng bộ nhớ, dung lượng bộ nhớ đang sử dụng, dung lượng còn trống, bộ nhớ đệm và bộ nhớ cached.
+
+**SWAP:**
+- Bộ nhớ hoán đổi từ disk thành memory, bao gồm **Total**, **Free**, **Used**, và **Available Memory**.
+
+---
+
+#### **Chi tiết các Process:**
+- **PID**: Mã tiến trình, mỗi tiến trình sẽ có PID riêng.
+- **USER**: Tên người tạo tiến trình.
+- **PR**: Mức độ ưu tiên của tiến trình.
+- **VIRT**: Dung lượng bộ nhớ ảo mà tiến trình sử dụng.
+- **RES**: Dung lượng bộ nhớ vật lý mà tiến trình đang sử dụng.
+- **SHR**: Dung lượng bộ nhớ chia sẻ.
+- **S**: Trạng thái của tiến trình (Running, Sleeping, Zombie, ...).
+- **%CPU**: Tỷ lệ phần trăm CPU mà tiến trình đang sử dụng.
+- **%MEM**: Tỷ lệ phần trăm bộ nhớ mà tiến trình đang sử dụng.
+- **TIME+**: Thời gian tổng cộng mà tiến trình đã chạy.
+- **COMMAND**: Tên của tiến trình.
+
+**Lệnh `uptime`**: Ngoài lệnh `top`, bạn cũng có thể sử dụng lệnh `uptime` để xem thông tin Load Average của hệ thống.
+
+---
+
+### Nginx Reverse Proxy là gì? Tác dụng của Nginx Reverse Proxy cho Apache
+
+**Nginx** là một máy chủ web mã nguồn mở, và **Nginx Reverse Proxy** là một tính năng cho phép Nginx hoạt động như một cầu nối giữa client và máy chủ backend. Thay vì kết nối trực tiếp với backend, client sẽ gửi yêu cầu đến Nginx, và Nginx sẽ chuyển tiếp yêu cầu đến backend thích hợp.
+
+#### Một số thuật toán cân bằng tải phổ biến:
+- **Round Robin**: Lần lượt chuyển các yêu cầu đến các máy chủ theo thứ tự tuần hoàn.
+- **Weighted Round Robin**: Một biến thể của Round Robin, trong đó mỗi máy chủ được gán một trọng số khác nhau tùy thuộc vào năng lực xử lý.
+- **Least Connections**: Máy chủ có ít kết nối đang mở nhất sẽ được chọn để xử lý yêu cầu kế tiếp.
+- **Least Response Time**: Yêu cầu được gửi đến máy chủ có thời gian đáp ứng nhanh nhất.
+- **Dựa trên địa chỉ IP của client**: Phân phối yêu cầu tới cùng một máy chủ.
+- **URL Hash**: Tương tự IP Hash, nhưng sử dụng URL của yêu cầu để xác định máy chủ.
+- **Least Loaded**: Yêu cầu được gửi đến máy chủ có tải thấp nhất tại thời điểm hiện tại, dựa trên các chỉ số như CPU, bộ nhớ, v.v.
+
+---
+
+#### **Tác dụng của Nginx Reverse Proxy cho Apache:**
+- **Cân bằng tải**: Nginx sử dụng các thuật toán cân bằng tải để phân phối yêu cầu đến nhiều máy chủ Apache, giúp cải thiện hiệu suất của Web server.
+- **Bảo mật**: Nginx hoạt động như một proxy, ngăn chặn kết nối trực tiếp từ client đến Apache. Điều này giúp bảo vệ Apache khỏi các cuộc tấn công DDoS và các lỗ hổng bảo mật có thể bị khai thác.
+- **Caching**: Nginx có thể cấu hình cache để giảm bớt yêu cầu mà Apache phải xử lý, từ đó cải thiện tốc độ phản hồi cho người dùng.
+- **Cấu hình SSL**: Việc quản lý SSL và mã hóa được thực hiện tập trung tại Nginx, đơn giản hóa quá trình cấu hình SSL cho toàn bộ hệ thống.
+
