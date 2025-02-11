@@ -18,4 +18,7 @@ LAMP là bộ công nghệ bao gồm các thành phần chính của một ứng
   + **Chi phí thấp** (opensource).
   + **Khả năng tùy chỉnh và tính linh hoạt cao** đối với các phần mềm mã nguồn mở.
   + **Cộng đồng hỗ trợ lớn**.
+# 2. Xem các thông tin của VPS
+### CPU: 
+![Screenshot 2025-02-11 112412](https://github.com/user-attachments/assets/12782551-4921-41ca-b9ad-3d00558ca679)
 
