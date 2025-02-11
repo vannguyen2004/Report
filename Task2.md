@@ -20,5 +20,15 @@ LAMP là bộ công nghệ bao gồm các thành phần chính của một ứng
   + **Cộng đồng hỗ trợ lớn**.
 # 2. Xem các thông tin của VPS
 ### CPU: 
-![Screenshot 2025-02-11 112412](https://github.com/user-attachments/assets/12782551-4921-41ca-b9ad-3d00558ca679)
+![Screenshot 2025-02-11 112349](https://github.com/user-attachments/assets/7e5615d7-5a49-4995-b5ab-1efb65ae12d3)
+### RAM
+![Screenshot 2025-02-11 112359](https://github.com/user-attachments/assets/7fe0b4df-4602-498d-94e6-27e30f38fb95)
+### DISK
+![Screenshot 2025-02-11 112412](https://github.com/user-attachments/assets/42befdc5-0f3e-4586-a43b-0998b912d2f2)
+### Banwidth
+![Screenshot 2025-02-11 112316](https://github.com/user-attachments/assets/d419a9b2-0988-4f53-9d43-f5c125af9192)
+### IOPS: Sử dụng FIO
+IOPS read max= 25k write max= 8k4
+![Screenshot 2025-02-11 133826](https://github.com/user-attachments/assets/78868210-e38a-44f8-b8ef-765a0f963939)
+
 
