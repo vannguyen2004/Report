@@ -22,7 +22,7 @@ LAMP là bộ công nghệ bao gồm các thành phần chính của một ứng
 ### CPU: 
 ![Screenshot 2025-02-11 112349](https://github.com/user-attachments/assets/7e5615d7-5a49-4995-b5ab-1efb65ae12d3)
 ### RAM
-![Screenshot 2025-02-11 112359](https://github.com/user-attachments/assets/7fe0b4df-4602-498d-94e6-27e30f38fb95)
+![Screenshot 2025-02-11 134051](https://github.com/user-attachments/assets/b340fe2d-d04f-48e9-9394-1f0652814a4f)
 ### DISK
 ![Screenshot 2025-02-11 112412](https://github.com/user-attachments/assets/42befdc5-0f3e-4586-a43b-0998b912d2f2)
 ### Banwidth
@@ -31,4 +31,9 @@ LAMP là bộ công nghệ bao gồm các thành phần chính của một ứng
 IOPS read max= 25k write max= 8k4
 ![Screenshot 2025-02-11 133826](https://github.com/user-attachments/assets/78868210-e38a-44f8-b8ef-765a0f963939)
 
+# 3. Wordpress
+*Khái niệm về wordpress*: là hệ thống mã nguồn mỡ dùng để sản xuất blog và website được viết bằng ngôn ngữ lập trình và cơ sở dữ liệu MySQL. WordPress được coi là một CMS (Content Management System phần mềm giúp người dùng tạo và quản lí sửa đổi nội dung trên một sang web mà không cần phải có kiến thức sâu về lập trình) miễn phí nhưng tốt.
+![Screenshot 2025-02-11 134217](https://github.com/user-attachments/assets/ee202dbc-8315-4371-a0e1-d1b9f413cbff)
+
+![Screenshot 2025-02-11 134358](https://github.com/user-attachments/assets/56cf2cb9-f66b-4234-b031-95d5dc67b67a)
 
