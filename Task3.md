@@ -4,8 +4,10 @@
   + Load Average <= số core, bình thường
   + Load Average > số core, đang bị tải cao, giảm hiệu suất
   + Load Average gấp đôi số core, quá tải nghiêm trong cần được can thiệp ngay
+    
 **Chỉ báo trong lệnh top**:
 ![Screenshot 2025-02-11 142454](https://github.com/user-attachments/assets/3e4fae3b-a930-4f8c-af84-1efc54c9147a)
+
 phần header:
   + Thời gian hiện tại: **14:24:51**
   + Trạng thái: **up**
