@@ -17,7 +17,7 @@ tasks: Số lượng các process
   + Total **95**
   + Running **1**
   + Sleeping **94**
-  + Stopped, Zombie (dừng và đóng băng)
+  + Stopped, Zombie (dừng và đóng băng).
 Cpu(s)
   + us: Tỷ lệ phần trăm CPU đang được sử dụng bởi các tiến trình người dùng 
   + sy: Tỷ lệ phần trăm CPU đang được sử dụng bởi các tiến trình hệ thống
