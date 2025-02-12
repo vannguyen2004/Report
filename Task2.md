@@ -1,6 +1,6 @@
 # 1. Mô hình LAMP stack
 
-**Khái niệm về Web stack**: là tập hợp những phần mềm được sử dụng để chạy các ứng dụng web động
+**Khái niệm về Web stack**: là tập hợp những phần mềm được sử dụng để chạy các ứng dụng web động.  
   *Một `Web Stack`* thông thường sẽ bao gồm các thành phần như:  
     + Hệ điều hành.  
     + Máy chủ Web.  
@@ -32,7 +32,7 @@ IOPS read max= 25k write max= 8k4
 ![Screenshot 2025-02-11 133826](https://github.com/user-attachments/assets/78868210-e38a-44f8-b8ef-765a0f963939)
 
 # 3. Wordpress
-*Khái niệm về wordpress*: là hệ thống mã nguồn mỡ dùng để sản xuất blog và website được viết bằng ngôn ngữ lập trình và cơ sở dữ liệu MySQL. WordPress được coi là một CMS (Content Management System phần mềm giúp người dùng tạo và quản lí sửa đổi nội dung trên một sang web mà không cần phải có kiến thức sâu về lập trình) miễn phí nhưng tốt.
+*Khái niệm về wordpress*: là hệ thống mã nguồn mỡ dùng để sản xuất blog và website được viết bằng ngôn ngữ lập trình PHP và cơ sở dữ liệu MySQL. WordPress được coi là một CMS (Content Management System phần mềm giúp người dùng tạo và quản lí sửa đổi nội dung trên một sang web mà không cần phải có kiến thức sâu về lập trình) miễn phí nhưng tốt.
 ![Screenshot 2025-02-11 134217](https://github.com/user-attachments/assets/ee202dbc-8315-4371-a0e1-d1b9f413cbff)
 
 ![Screenshot 2025-02-11 134358](https://github.com/user-attachments/assets/56cf2cb9-f66b-4234-b031-95d5dc67b67a)
