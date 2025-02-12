@@ -1,7 +1,7 @@
 # 1. Mô hình LAMP stack
 
 **Khái niệm về Web stack**: là tập hợp những phần mềm được sử dụng để chạy các ứng dụng web động
-  *Một `Web Stack`* thông thường sẽ bao gồm các thành phần như:
+  *Một `Web Stack`* thông thường sẽ bao gồm các thành phần như:  
     + Hệ điều hành.  
     + Máy chủ Web.  
     + Hệ thống quả trị cơ sở dữ liệu.  
