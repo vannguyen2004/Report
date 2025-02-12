@@ -94,5 +94,9 @@ IOPS read max= 25k write max= 8k4
  
 ![Screenshot 2025-02-12 131515](https://github.com/user-attachments/assets/86691acd-3f1f-4580-b278-c4663af6b553)
 
+# 4. Thêm 2 domain mỗi domain một site  
+**Tên miền Website thứ nhất là `web1.vn`**
+**Tên miền Website thứ nhất là `web2.vn`**
+
 
 
