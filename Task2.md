@@ -94,7 +94,7 @@ IOPS read max= 25k write max= 8k4
  
 ![Screenshot 2025-02-12 131515](https://github.com/user-attachments/assets/86691acd-3f1f-4580-b278-c4663af6b553)
 
-# 4. Thêm 2 domain mỗi domain một site  
+# 4. Thêm 2 domain mỗi domain một site Wordpress
 **Tên Website thứ nhất là `www.web1.vn`**  
 **Tên Website thứ nhất là `www.web2.vn`**  
 + Tập tin cấu hình của virtual trong dường dẫn `/etc/httpd/conf.d/vhost.conf`
