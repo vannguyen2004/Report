@@ -89,7 +89,8 @@ IOPS read max= 25k write max= 8k4
 + Alias: giúp ánh xạ URL /wordpress đến “/var/www/wordpress”
 + Directory: định nghĩa các quyền cho thư mục
 + Reload http bằng câu lệnh systemctl reload httpd
-+ Sau đó dùng trình duyệt truy cập vào địa chỉ http://103.112.211.194/wordpress/ và bắt đầu thiết lập  
+  
+ Sau đó dùng trình duyệt truy cập vào địa chỉ http://103.112.211.194/wordpress/ và bắt đầu thiết lập  
  
 ![Screenshot 2025-02-12 131515](https://github.com/user-attachments/assets/86691acd-3f1f-4580-b278-c4663af6b553)
 
