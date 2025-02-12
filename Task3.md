@@ -82,5 +82,7 @@
 - **Cân bằng tải**: Nginx sử dụng các thuật toán cân bằng tải để phân phối yêu cầu đến nhiều máy chủ Apache, giúp cải thiện hiệu suất của Web server.
 - **Bảo mật**: Nginx hoạt động như một proxy, ngăn chặn kết nối trực tiếp từ client đến Apache. Điều này giúp bảo vệ Apache khỏi các cuộc tấn công DDoS và các lỗ hổng bảo mật có thể bị khai thác.
 - **Caching**: Nginx có thể cấu hình cache để giảm bớt yêu cầu mà Apache phải xử lý, từ đó cải thiện tốc độ phản hồi cho người dùng.
-- **Cấu hình SSL**: Việc quản lý SSL và mã hóa được thực hiện tập trung tại Nginx, đơn giản hóa quá trình cấu hình SSL cho toàn bộ hệ thống.
+- **Cấu hình SSL**: Việc quản lý SSL và mã hóa được thực hiện tập trung tại Nginx, hạn chế quá trình SSL handshake bằng cơ chế keepalive và sử dụng lại các tham số cho kết nối lại hay mở nhiều kết nối song song
+- **Giảm nghẻn cổ chai**: do Nginx có hiệu xuất cao có thể xử lí lên đến 10.000 kết nối đồng thời bằng cơ chế hướng sự kiện  `event driven` và kiến trúc không đồ bộ `asynchronous`
+- 
 
