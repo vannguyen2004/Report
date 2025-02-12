@@ -1,11 +1,11 @@
 # 1. Mô hình LAMP stack
 
-**Khái niệm về stack**: (hay còn được gọi là ngăn xếp hoặc data structure) là một cấu trúc dữ liệu được lưu trữ theo dạng LIFO (Last In, First Out). Có nghĩa là phần tử được thêm vào đầu tiên sẽ là phần tử được lấy ra cuối cùng và ngược lại.
-
-### *Một số thuật toán chính trên Stack bao gồm*
-  + **Push**: Đẩy phần tử lên đầu stack.
-  + **Pop**: Lấy phần tử ở đầu stack.
-  + **Peek**: Xem phần tử đầu tiên mà không xóa nó khỏi stack.
+**Khái niệm về Web stack**: là tập hợp những phần mềm được sử dụng để chạy các ứng dụng web động
+  *Một `Web Stack`* thông thường sẽ bao gồm các thành phần như:
+    + Hệ điều hành
+    + Máy chủ Web
+    + Hệ thống quả trị cơ sở dữ liệu
+    + Ngôn ngữ lập trình
 
 ### **Khái niệm về LAMP Stack**: 
 LAMP là bộ công nghệ bao gồm các thành phần chính của một ứng dụng web động. LAMP là viết tắt của các thành phần sau:
