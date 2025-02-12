@@ -84,5 +84,5 @@
 - **Caching**: Nginx có thể cấu hình cache để giảm bớt yêu cầu mà Apache phải xử lý, từ đó cải thiện tốc độ phản hồi cho người dùng.
 - **Cấu hình SSL**: Việc quản lý SSL và mã hóa được thực hiện tập trung tại Nginx, hạn chế quá trình SSL handshake bằng cơ chế keepalive và sử dụng lại các tham số cho kết nối lại hay mở nhiều kết nối song song
 - **Giảm nghẻn cổ chai**: do Nginx có hiệu xuất cao có thể xử lí lên đến 10.000 kết nối đồng thời bằng cơ chế hướng sự kiện  `event driven` và kiến trúc không đồ bộ `asynchronous`
-- 
+- **Hiệu quả các tệp tỉnh**: Nginx rất hiệu quả khi phục vụ các tệp tĩnh nhanh chóng, phân chia công việc với Apache (Nginx sử lý các yêu cầu tĩnh như html, css, hình ảnh, Apache xử lí các yêu cầu động như PHP)
 
