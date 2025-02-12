@@ -95,8 +95,28 @@ IOPS read max= 25k write max= 8k4
 ![Screenshot 2025-02-12 131515](https://github.com/user-attachments/assets/86691acd-3f1f-4580-b278-c4663af6b553)
 
 # 4. Thêm 2 domain mỗi domain một site  
-**Tên miền Website thứ nhất là `web1.vn`**
-**Tên miền Website thứ nhất là `web2.vn`**
+**Tên Website thứ nhất là `www.web1.vn`**  
+**Tên Website thứ nhất là `www.web2.vn`**  
++ Tập tin cấu hình của virtual trong dường dẫn `/etc/httpd/conf.d/vhost.conf`
+  *Ngoài ra cần tạo site wordpress thứ 2 giống như phần  **tải wordpress và cấu hình** ở mục 3 Wordpress
+   
+![Screenshot 2025-02-12 170553](https://github.com/user-attachments/assets/ab38d3ce-b20a-477b-8963-6419d4aa290c)
 
++ <VirtualHost *:80> định nghĩa các Virtual Hosts  
++ DocumentRoot: Chỉ định thư mục gốc chứa các tệp tin của website  
++ ServerName: Đây là tên miền của website  
++ ErrorLog: Đường dẫn đến tệp log ghi lại các lỗi của website  
++ CustomLog: Đường dẫn đến tệp log ghi lại các yêu cầu của người dùng  
++ Các phần <Directory> chỉ định quyền truy cập và các tùy chọn cho thư mục cụ thể
++ Options FollowSymLinks: Cho phép Apache theo dõi các liên kết tượng trưng (symlinks) trong thư mục này
++ AllowOverride All: Cho phép các tệp .htaccess trong thư mục này ghi đè cấu hình của Apache
+
+  ##### Web1
+  
+![Screenshot 2025-02-12 171444](https://github.com/user-attachments/assets/155438b7-2893-4a28-98d0-7a0842335c5f)  
+
+  ##### Web2
+  
+![Screenshot 2025-02-12 171449](https://github.com/user-attachments/assets/cac3f404-ebb2-4d03-8857-361236784896)
 
 
