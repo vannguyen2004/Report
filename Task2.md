@@ -35,16 +35,16 @@ IOPS read max= 25k write max= 8k4
 *Khái niệm về wordpress*: là hệ thống mã nguồn mỡ dùng để sản xuất blog và website được viết bằng ngôn ngữ lập trình PHP và cơ sở dữ liệu MySQL. WordPress được coi là một CMS (Content Management System phần mềm giúp người dùng tạo và quản lí sửa đổi nội dung trên một sang web mà không cần phải có kiến thức sâu về lập trình) miễn phí nhưng tốt.  
 ### Quá trình cài đặt wordpress  
 ####  Cài đặt web server (apache)
- + dnf install -y httpd
- + Kiểm tra lại rpm -qa | grep httpd  
+ + `dnf install -y httpd`
+ + Kiểm tra lại `rpm -qa | grep httpd`  
    ![Screenshot 2025-02-12 114125](https://github.com/user-attachments/assets/51ac314d-54a3-4c6d-a92d-9b7542c6e703)
  + Khởi động Apache bằng câu lệnh `systemctl enable --now httpd`
-### Cài đặt Database MariaDB
- + dnf install -y mariadb-server
+#### Cài đặt Database MariaDB
+ + `dnf install -y mariadb-server`
  + Thiết lập bộ mã ký tự cho MariaDB sử dụng utf8mb4 phiên bản mở rộng của utf8
    
 ![Screenshot 2025-02-12 114718](https://github.com/user-attachments/assets/8ebf9cd6-45a7-486a-9688-66c110dd7c20)  
- + Khởi động MariaDB bằng câu lệnh systemctl enable --nơ mariadb-server  
+ + Khởi động MariaDB bằng câu lệnh `systemctl enable --now mariadb-server`  
  + Thiết lập cơ sở dữ liệu MariaDB bằng câu lệnh `mysql_secure_installation` sẽ có thông báo hỏi có muốn thay đổi một số thiết lập  
 
 ![Screenshot 2025-02-12 115308](https://github.com/user-attachments/assets/496848d5-75b1-42c4-ae25-058542035ae6)
@@ -64,18 +64,34 @@ IOPS read max= 25k write max= 8k4
    
 ![Screenshot 2025-02-12 124051](https://github.com/user-attachments/assets/94b30216-6e95-40c4-a993-bea9339426a2)
 
-### Thiết lập PHP  
- + Tải PHP về máy bằng câu lệnh: dnf install -y php  
- + Tải các module PHP: dnf -y install php-pear php-mbstring php-pdo php-gd php-mysqlnd php-enchant enchant hunspell
- + Điều chỉnh các thông số hoạt động của PHP khi xử lí các yêu cầu từ web server trong tệp /etc/php-fpm.d/www.conf. Sau đó khởi động lại module php-fpm
+#### Thiết lập PHP  
+ + Tải PHP về máy bằng câu lệnh: `dnf install -y php`  
+ + Tải các module PHP: `dnf -y install php-pear php-mbstring php-pdo php-gd php-mysqlnd php-enchant enchant hunspell`
+ + Điều chỉnh các thông số hoạt động của PHP khi xử lí các yêu cầu từ web server trong tệp /etc/php-fpm.d/www.conf.  
+ + Sau đó khởi động lại module php-fpm  
    ![Screenshot 2025-02-12 121021](https://github.com/user-attachments/assets/d7e71447-88a7-49fd-b7c2-474e467db106)
 
-### Tải Wordress và cấu hình  
+#### Tải Wordress và cấu hình  
++ Sử dụng công cụ wget để tải file từ internet  
 ![Screenshot 2025-02-12 124522](https://github.com/user-attachments/assets/403380d6-303d-4c60-9f4e-b6ebb50294ab)
 
++ Xã nén file vừa tải vào thư mục /var/www/ bằng câu lệnh `tar zxvf latest.tar.gz -C /var/www/`  
++ Thay đổi quyền truy cập thư mục /var/www/wordpress cho thuộc người dùng apache.
+  
+![Screenshot 2025-02-12 124721](https://github.com/user-attachments/assets/bf8773c2-49fe-4a38-b5de-abf44244638e)
+
++ Cấu hình trang web Wordpress trong file `/etc/httpd/conf.d/wordpress.conf`
+
+![Screenshot 2025-02-12 125312](https://github.com/user-attachments/assets/cc9e3e03-8960-43db-8991-c56d1bdd1dca)
+
++ Timout: thời gian chờ tối đa cho một kết nối
++ ProxyTimeout: Thời gian khi Apache hoạt động như nột Proxy
++ Alias: giúp ánh xạ URL /wordpress đến “/var/www/wordpress”
++ Directory: định nghĩa các quyền cho thư mục
++ Reload http bằng câu lệnh systemctl reload httpd
++ Sau đó dùng trình duyệt truy cập vào địa chỉ http://103.112.211.194/wordpress/ và bắt đầu thiết lập  
+ 
+![Screenshot 2025-02-12 131515](https://github.com/user-attachments/assets/86691acd-3f1f-4580-b278-c4663af6b553)
 
 
-![Screenshot 2025-02-11 134217](https://github.com/user-attachments/assets/ee202dbc-8315-4371-a0e1-d1b9f413cbff)
-
-![Screenshot 2025-02-11 134358](https://github.com/user-attachments/assets/56cf2cb9-f66b-4234-b031-95d5dc67b67a)
 
