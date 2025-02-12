@@ -2,10 +2,10 @@
 
 **Khái niệm về Web stack**: là tập hợp những phần mềm được sử dụng để chạy các ứng dụng web động
   *Một `Web Stack`* thông thường sẽ bao gồm các thành phần như:
-    + Hệ điều hành
-    + Máy chủ Web
-    + Hệ thống quả trị cơ sở dữ liệu
-    + Ngôn ngữ lập trình
+    + Hệ điều hành. 
+    + Máy chủ Web. 
+    + Hệ thống quả trị cơ sở dữ liệu. 
+    + Ngôn ngữ lập trình. 
 
 ### **Khái niệm về LAMP Stack**: 
 LAMP là bộ công nghệ bao gồm các thành phần chính của một ứng dụng web động. LAMP là viết tắt của các thành phần sau:
