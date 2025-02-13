@@ -114,7 +114,7 @@
 
 ---
 ### Stress test và đánh giá trước và sau khi có Nginx reverse LAMP stack
-  **Thực hiện trên Apache JMeter**
+  **Thực hiện trên Apache JMeter**  
     + Number of Threads: 1000 (Mô phỏng 1000 người dùng đồng thời)  
     + Loop Count: 200 (Mỗi người dùng sẽ thực hiện 200 yêu cầu liên tiếp)  
     + Ramp-Up Period: 100 giây (Dàn trải việc tạo ra các thread)  
