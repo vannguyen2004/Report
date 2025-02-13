@@ -17,5 +17,5 @@
   Xác định Server nào được phép gửi Mail từ một tên miền cụ . Mục đích dùng để xác thực mail kiểm tra tính hợp phép của Mail  
   Quản trị viên sẽ thiết lập bảng ghi TXT trong DNS để khai báo danh sách các máy chủ có quyền gửi Email thay mặc cho domain đó. Khi nhận được Mail máy chủ nhận sẽ lấy domain trong mail sau đó truy vấn DNS của example.com để lấy bảng ghi SPF nó tìm bảng ghi TXT chứa v=spf1 và lấy danh sách IP cho phép sau đó kiểm tra địa chỉ IP của máy chủ gửi có khớp với địa chỉ IP trong danh sách hay không
   ## PTR (bảng ghi Pointer)
-    Dùng để tra cứu ngược từ địa chỉ IP sang tên miền
+  Dùng để tra cứu tên miền từ địa chỉ IP
   
