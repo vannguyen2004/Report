@@ -1,4 +1,4 @@
-# Khái niệm cơ bản về EXIM và Dovecot
+# Khái niệm cơ bản về Exim và Dovecot
 ### Exim ###
   Exim là một trong phần mềm máy chủ email được sử dụng nhiều nhất cho các hệ điều hành giống Unix, chẳng hạn như Linux và Solaris,….Nó đóng vai trò như một Mail Transfer Agent (MTA) có nhiệm vụ chuyển mail từ người gửi đến đến người nhận thông qua máy chủ mail  
   *Một số ưu điểm của Exim*:  
