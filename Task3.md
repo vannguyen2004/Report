@@ -147,7 +147,7 @@
 
 ![Screenshot 2025-02-13 095315](https://github.com/user-attachments/assets/21ccf9d4-0ae5-41ea-a531-0f853f225024)
 
-![Screenshot 2025-02-13 095302](https://github.com/user-attachments/assets/6e88ccbd-d833-42fd-8eb4-168192bf876a
+![Screenshot 2025-02-13 095302](https://github.com/user-attachments/assets/6e88ccbd-d833-42fd-8eb4-168192bf876a)
 
 #### Đánh giá
 + Tốc phản hồi trung bình cao hơn gấp đôi khi có Nginx reverse do có proxy làm đứng trung gian giữa người dùng và WEB
