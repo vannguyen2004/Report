@@ -106,6 +106,23 @@
    + proxy_set_header X-Real-IP $remote_addr: Nginx thêm `X-Real-IP` để gửi yêu cầu tới backend (`X-Real-IP` là địa chỉ IP của Client khi yêu càu đến Nginx)  
    + proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for: Chỉ thị này thêm header  `X-Forwarded-For` vào yêu cầu gửi đến backend. Đây là một chuỗi các địa chỉ IP được thêm vào từ phía người dùng đến Nginx, giúp backend biết rõ đường đi của yêu cầu qua các proxy.  
    + proxy_set_header Host $http_host: Head `http_host` được giữ nguyên khi nginx gửi đến backend thông thường sẽ là tên website  
-   + proxy_pass là chỉ thị cơ bản để thiết lập reverse proxy, nơi Nginx đóng vai trò làm "người trung gian", nhận yêu cầu và chuyển tiếp đến một máy chủ khác  
+   + proxy_pass là chỉ thị cơ bản để thiết lập reverse proxy, nơi Nginx đóng vai trò làm "người trung gian", nhận yêu cầu và chuyển tiếp đến một máy chủ khác
+
+#### Truy cập trang web với giao thức http ở port 80
+
+![Screenshot 2025-02-13 104243](https://github.com/user-attachments/assets/d7a64518-58e1-4b55-a3e3-95e3f01f0716)
+
+---
+### Stress test và đánh giá trước và sau khi có Nginx reverse LAMP stack
+  **Thực hiện trên Apache JMeter**
+    + Number of Threads: 1000 (Mô phỏng 1000 người dùng đồng thời)
+    + Loop Count: 200 (Mỗi người dùng sẽ thực hiện 200 yêu cầu liên tiếp)
+    + Ramp-Up Period: 100 giây (Dàn trải việc tạo ra các thread)
+    
+#### Không có Nginx Reverse 
+
+![Screenshot 2025-02-13 094617](https://github.com/user-attachments/assets/9b48b4da-a31b-46de-b589-48e2b5438409)
+
+
 
 
