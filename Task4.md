@@ -14,7 +14,8 @@
   Sử dụng bảng ghi DNS để xác thực email
   Khi tạo cặp khóa private và public. Khóa riêng sẽ được thêm vào máy chủ gửi mail và sử dụng nó để ký mail trước khi gửi đi nó được gắn vào phần header của mail. Mail Server của người nhận kiểm tra chữ kí DKIM bằng khóa công khai trong DNS của domain người  
 ### SPF
-  Xác định Server nào được phép gửi Mail từ một tên miền cụ . Mục đích dùng để xác thực mail kiểm tra tính hợp phép của Mail
+  Xác định Server nào được phép gửi Mail từ một tên miền cụ . Mục đích dùng để xác thực mail kiểm tra tính hợp phép của Mail  
+  Quản trị viên sẽ thiết lập bảng ghi TXT trong DNS để khai báo danh sách các máy chủ có quyền gửi Email thay mặc cho domain đó. Khi nhận được Mail máy chủ nhận sẽ lấy domain trong mail sau đó truy vấn DNS của example.com để lấy bảng ghi SPF nó tìm bảng ghi TXT chứa v=spf1 và lấy danh sách IP cho phép sau đó kiểm tra địa chỉ IP của máy chủ gửi có khớp với địa chỉ IP trong danh sách hay không
   ## PTR (bảng ghi Pointer)
     Dùng để tra cứu ngược từ địa chỉ IP sang tên miền
   
