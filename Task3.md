@@ -115,13 +115,46 @@
 ---
 ### Stress test và đánh giá trước và sau khi có Nginx reverse LAMP stack
   **Thực hiện trên Apache JMeter**
-    + Number of Threads: 1000 (Mô phỏng 1000 người dùng đồng thời)
-    + Loop Count: 200 (Mỗi người dùng sẽ thực hiện 200 yêu cầu liên tiếp)
-    + Ramp-Up Period: 100 giây (Dàn trải việc tạo ra các thread)
+    + Number of Threads: 1000 (Mô phỏng 1000 người dùng đồng thời)  
+    + Loop Count: 200 (Mỗi người dùng sẽ thực hiện 200 yêu cầu liên tiếp)  
+    + Ramp-Up Period: 100 giây (Dàn trải việc tạo ra các thread)  
     
 #### Không có Nginx Reverse 
 
++ Thời gian phản hồi trung bình: 38ms  
++ Độ trễ 90%: 54ms  
++ Độ trễ 95%: 66ms  
++ Độ trễ 99%: 96ms  
++ Lỗi: 0.05%  
++ Thông lượng (Throughput): 1887.6 yêu cầu/giây  
++ Lưu lượng nhận: 3570.25 KB/s  
++ Lưu lượng gửi: 239.52 KB/s  
+
+![Screenshot 2025-02-13 094625](https://github.com/user-attachments/assets/171c5ffa-dcb4-4191-b03a-81366591505f)
+
 ![Screenshot 2025-02-13 094617](https://github.com/user-attachments/assets/9b48b4da-a31b-46de-b589-48e2b5438409)
+
+#### Sau khi có Nginx Reverse
+**Nginx chưa cấu hình cache**
++ Thời gian phản hồi trung bình: 69ms (tăng so với Apache trực tiếp)  
++ Độ trễ 90%: 85ms (tăng)  
++ Độ trễ 95%: 88ms (tăng)  
++ Độ trễ 99%: 109ms (tăng)  
++ Lỗi: 0.00% (cải thiện so với 0.05% ở Apache trực tiếp)  
++ Thông lượng: 1828.9 yêu cầu/giây (giảm so với Apache trực tiếp)  
++ Lưu lượng nhận: 3380.91 KB/s (giảm)  
++ Lưu lượng gửi: 223.25 KB/s (giảm)  
+
+![Screenshot 2025-02-13 095315](https://github.com/user-attachments/assets/21ccf9d4-0ae5-41ea-a531-0f853f225024)
+
+![Screenshot 2025-02-13 095302](https://github.com/user-attachments/assets/6e88ccbd-d833-42fd-8eb4-168192bf876a
+
+#### Đánh giá
++ Tốc phản hồi trung bình cao hơn gấp đôi khi có Nginx reverse do có proxy làm đứng trung gian giữa người dùng và WEB
++ Lỗi giảm xuống từ 0.05% xuống 0.00% cho thấy khả năng chịu tải của Nginx cao hơn Apache
+
+
+
 
 
 
