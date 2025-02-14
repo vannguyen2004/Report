@@ -41,12 +41,12 @@
 ![Screenshot 2025-02-14 091724](https://github.com/user-attachments/assets/db00f602-5b75-4b2c-8e56-c9187df988ca)
 
   + local delivery: là cấu hình liên quan đến việc xử lí thư nội bộ, tức là thư được gửi đến cùng tên. Ý nghĩa của các thông số như:  
-      `driver = appendfile`: Exim sử dụng phương thức appendfile để lưu tiệp, phương thức này sẽ lưu nội dung vào cuối tệp thay vì ghi đè  
-      `directory = $home/Maildir`: chỉ định vị trí lưu Mail. Trong thư mục Maildir ở thư mục người dùng
-      `maildir_format`: Chỉ định lưu theo format mail
-      `maildir_use_size_file`: Exim có thể tạo và sử dụng một tệp size để lưu trữ kích thước của các thư trong thư mục, giúp theo dõi và quản lý dung lượng thư
-      `delivery_date_add`: Yêu cầu thêm ngày giờ vào thư khi thực hiện gửi
-      `envelope_to_add`: Thêm địa chỉ người nhận vào trong thư  
+      `driver = appendfile`: Exim sử dụng phương thức appendfile để lưu tiệp, phương thức này sẽ lưu nội dung vào cuối tệp thay vì ghi đè    
+      `directory = $home/Maildir`: chỉ định vị trí lưu Mail. Trong thư mục Maildir ở thư mục người dùng  
+      `maildir_format`: Chỉ định lưu theo format mail  
+      `maildir_use_size_file`: Exim có thể tạo và sử dụng một tệp size để lưu trữ kích thước của các thư trong thư mục, giúp theo dõi và quản lý dung lượng thư  
+      `delivery_date_add`: Yêu cầu thêm ngày giờ vào thư khi thực hiện gửi  
+      `envelope_to_add`: Thêm địa chỉ người nhận vào trong thư   
       `return_path_add`:  Return-Path là địa chỉ mà nếu có lỗi hoặc không thể gửi thư, thư sẽ được trả lại.  
       `group = mail`: chỉ định nhóm người dùng mà thư sẽ được lưu dưới quyền truy cập. Thư sẽ có quyền truy cập cho nhóm mail  
       `mode = 0660`: quyền truy cập thư mục  
