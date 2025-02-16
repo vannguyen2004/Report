@@ -1,66 +1,39 @@
-1\. Thuê máy chủ riêng và thuê chổ đặt máy chủ
+## 1. Thuê máy chủ riêng và thuê chỗ đặt máy chủ
 
-\- Thuê máy chủ riêng là (Dedicate Server): thuê toàn bộ máy chủ vật lí từ nhà cung cấp dịch vụ để lưu trữ dữ liệu.
+| **Thuê máy chủ riêng (Dedicated Server)** | **Thuê chỗ đặt máy chủ (Colocation)** |
+|--------------------------------------------|---------------------------------------|
+| Thuê toàn bộ máy chủ vật lý từ nhà cung cấp dịch vụ để lưu trữ dữ liệu. | Thuê vị trí đặt máy chủ của doanh nghiệp ở các Data Center. |
+| **Đặc điểm**                               | **Đặc điểm**                         |
+| Tài nguyên riêng biệt: Máy chủ không chia sẻ tài nguyên với bất kỳ ai. | Cơ sở hạ tầng: Các thành phần như điện, kết nối và thiết bị làm mát được đảm bảo. |
+| Toàn quyền quản trị máy chủ.               | Bảo mật cao: Có bảo vệ vật lý và bảo vệ mạng (VD: Tường lửa). |
+| Hiệu suất cao: Sử dụng toàn bộ tài nguyên trên máy tính. | Khả năng mở rộng linh hoạt, tiết kiệm không gian và giảm rủi ro về bảo mật. |
+| Bảo mật: Phục vụ cho một khách hàng duy nhất. | Đảm bảo tính liên tục và phục hồi: Các Colocation thường có các giải pháp sao lưu để dữ liệu có thể phục hồi nhanh chóng. |
+| Chi phí cao: Đắt hơn so với VPS, Hosting. | Hỗ trợ 24/7: Cung cấp hỗ trợ các sự cố phần cứng hoặc phần mềm nhanh chóng. |
 
-Đặc điểm của Dedicate Server:
 
-\+ Tài nguyên riêng biệt: máy chủ không chia sẽ tài nguyên với bất kì ai
+## 2. VPS
 
-\+ Toàn quyền quản trị máy chủ
+Khái niệm về VPS (Virtual Private Server): là một dạng máy chủ ảo được xây dựng trên nền máy chủ vật lý. Được cài đặt bằng cách phân chia một máy chủ vật lý thành nhiều máy chủ ảo khác nhau (như CPU, RAM,…). Các VPS sẽ tách biệt với nhau trên máy chủ vật lý. Có 2 loại ảo hóa phổ biến là Virtual Machine và Container.
 
-\+ Hiệu suất cao: sử dụng toàn bộ tài nguyên trên máy tính
+| **Loại VPS**               | **Đặc điểm**                                                                                                                                             |
+|----------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **VPS giá rẻ (VPS SSD)**    | Cung cấp giải pháp ảo hóa với nhu cầu cá nhân, doanh nghiệp nhỏ.                                                                                       |
+|                            | Chỉ hỗ trợ hệ điều hành Linux.                                                                                                                          |
+| **VPS cao cấp**             | Đáp ứng nhu cầu cho các site khác nhau, cần sự ổn định, tốc độ truy xuất nhanh, tài nguyên sử dụng dịch vụ lớn.                                          |
+|                            | Hỗ trợ ảo hóa toàn phần KVM (OS Windows/Linux) và hỗ trợ chạy Docker trên VPS.                                                                         |
+| **VPS NVMe**                | Là dịch vụ máy chủ được trang bị ổ cứng NVMe.                                                                                                           |
+|                            | Tốc độ truy xuất nhanh hơn các VPS SSD thông thường, do tốc độ đọc ghi của NVMe nhanh hơn.                                                              |
+| **VPS MMO**                 | Là dịch vụ máy chủ ảo chuyên biệt được sử dụng cho việc kiếm tiền trực tuyến, được cung cấp bởi các nhà cung cấp dịch vụ lưu trữ đám mây.              |
+|                            | **Đặc điểm**:                                                                                                                                           |
+|                            | - Thường có cấu hình mạnh mẽ, giúp chạy các ứng dụng MMO đòi hỏi nhiều tài nguyên như CPU, RAM và dung lượng lưu trữ.                                  |
+|                            | - Tốc độ cao đảm bảo tốc độ truy cập ổn định.                                                                                                          |
+|                            | - Cung cấp địa chỉ IP riêng giúp đảm bảo quyền riêng tư cho người tham gia các hoạt động MMO.                                                            |
+|                            | - Là một giải pháp tăng hiệu suất và tiết kiệm chi phí cho các hoạt động kiếm tiền trực tuyến.                                                           |
+| **VPS Minecraft**           | Là máy chủ được tối ưu hóa để chạy trò chơi Minecraft. Đây là giải pháp phổ biến cho những người muốn tạo một máy chủ Minecraft riêng để chơi với bạn bè hoặc quản lý một cộng đồng người chơi trực tuyến. |
+| **VPS GPU**                 | Là loại dịch vụ máy chủ ảo được trang bị thêm bộ xử lý GPU (Graphic Processing Unit), đem lại khả năng xử lý tác vụ đồ họa mạnh mẽ, vượt trội.             |
+|                            | So với VPS thông thường thì VPS GPU có hiệu suất cao hơn trong các tác vụ liên quan đến đồ họa, có thể xử lý nhiều tác vụ song song cùng lúc.           |
+|                            | Thích hợp cho các ứng dụng đòi hỏi tính toán đồ họa cao. Tuy nhiên, VPS GPU có giá thành cao hơn so với VPS thông thường.                               |
 
-\+ Bảo mật: Phục vụ cho một khách hàng duy nhất
-
-\+ Chi phí cao: đắt hơn so với VPS, Hosting
-
-\- Thuê chổ đặt máy chủ (Colocation) là: thuê vị trí đặt máy chủ của doanh nghiệp ở các Data Center. Nơi đáp ứng các yêu cầu về đường truyền, hệ thống điện, điều hòa và các thiết bị điện khác
-
-Đặc điểm của thuê máy chủ
-
-\+ Cơ sở hạ tầng: Các thành phần như điện, kết nối và thiết bị làm mát được đảm bảo
-
-\+ Bảo mật cao: Có bảo vệ vật lí và bảo vệ mạng (VD: Tường lữa)
-
-\+ Khả năng mở rộng linh hoạt tiết kiệm không gian và giảm rủi ro về bảo mật
-
-\+ Đảm bảo tính liên tục và phục hồi: thông thường các Colocation có các giải pháp sao lưu để dữ liệu có thể phục hồi nhanh chóng
-
-\+ Hổ trợ 24/7: Cung cấp hổ trợ các sự cố phần cứng hoặc phần mềm nhanh chóng
-
-2\. VPS
-
-Khái niệm về VPS (Virtual Private Server): là một dạng máy chủ ảo được xây dựng trên nền máy chủ vật lí. Được cài đặt bằng cách phân chia một máy chủ vật lí thành nhiều máy chủ ảo khác nhau ( như CPU, RAM,…). Các VPS sẽ tách biệt với nhau trên máy chủ vật lí. Có 2 loại ảo hóa phổ biến là Virtual Machine và Containter
-
-\- VPS giá rẻ (VPS SSD): cung cấp giải pháp ảo hóa với nhu cầu cá nhân, doanh nghiêp nhỏ
-
-_Đặc điểm_: chỉ hổ trợ hệ điều hành Linux
-
-\- VPS cao cấp: đáp ưng nhu cầu cho các site khác nhau, cần sự ổn định, tốc độ truy suất nhanh, tài nguyên sử dụng dịch vụ lớn.
-
-_Đặc điểm_: Hổ trợ ảo hóa toàn phần KVM (OS Windows/Linux) hổ trợ chạy Docker trên VPS
-
-\- VPS NVMe: là dịch vụ máy chủ được trang bị ổ cứng NVMe
-
-_Đặc điểm_: tốc độ truy xuất nhanh hơn các VPS SSD thông thường, do tốc độ đọc ghi của NVMe nhanh hơn
-
-\- VPS MMO: là dịch vụ máy chủ ảo chuyên biệt được sử dụng cho việc kiếm tiền trực tuyến, được cung cấp bởi các nhà cung cấp dịch vụ lưu trữ đám mây
-
-_Đặc điểm:_
-
-\- Thường có cấu hình mạnh mẽ, giúp chạy các ứng dụng MMO đòi hỏi nhiều tài nguyên như CPU, RAM và dung lượng lưu trữ
-
-\- Tốc độ cao đảm bảo tốc độ truy cập ổn định
-
-\- Cung cấp địa chỉ IP riêng giúp đảm bảo quyền riêng tư cho người tham gia các hoạt động MMO
-
-\* Là một giải pháp tăng hiệu suất và tiết kiệm chi phí khi cho các hoạt động kiếm tiền trực tuyến
-
-\- VPS Minecraft: là máy chủ được tối ưu hóa để chạy trò chơi Minecraft. Đây là giải pháp phổ biến cho những người muốn tạo một máy chủ Minecraft riêng để chơi với bạn bè hoặc quản lí một cộng đồng người chơi trực tuyến.
-
-\- VPS GPU là loại dịch vụ máy chủ ảo được trang bị thêm bộ xử lý GPU (Graphic Processing Unit), đem lại khả năng xử lý tác vụ đồ họa mạnh mẽ, vượt trội
-
-\+ So với VPS thông thường thì VPS GPU có hiệu xuất cao hơn trong cấc tác vụ liên quan đến đồ họa, có thể xử lý nhiều tác vụ song song cùng lúc, thích hợp cho các ứng dụng đòi hỏi tính toán đồ họa cao. Tuy nhiên VPS GPU có giá thành cao hơn so với VPS thông thường.
 
 3\. Hosting
 
