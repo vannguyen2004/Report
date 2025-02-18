@@ -27,22 +27,7 @@
   Tải repo Epel và exim `dnf installl -y epel-release`   `dnf install -y exim`  
   Thay đổi tập tin cấu hình của exim `/etc/exim/exim.conf`    
    Thêm mới dòng 4 5  
-  + `untrusted_set_sender = *` : Exim không thay đổi địa chỉ người gửi trong trường hợp nó không xác minh được địa chỉ từ một nguồn đáng tin  
-  + `no_local_from_check` : Exim sẽ không kiểm tra và xử lí các thư có địa chỉ là nội bộ (mặc định trust) 
-  
-![Screenshot 2025-02-14 084337](https://github.com/user-attachments/assets/a009dbd6-39a4-404f-8b1b-4838f19272a4)
-
-  + thiết lập hostname của máy chủ exim
-    
-![Screenshot 2025-02-14 091616](https://github.com/user-attachments/assets/fb86dca8-99c1-4bbb-9f4e-aa355b6770d3)
-
-![Screenshot 2025-02-14 091539](https://github.com/user-attachments/assets/a8783588-0a57-4415-82b4-940dbc02586a)
-
-  + Thiết lập tên domain cho máy chủ Mail
-    
-![Screenshot 2025-02-14 091724](https://github.com/user-attachments/assets/db00f602-5b75-4b2c-8e56-c9187df988ca)
-
-  + local delivery: là cấu hình liên quan đến việc xử lí thư nội bộ, tức là thư được gửi đến cùng tên. Ý nghĩa của các thông số như:  
+  + `untrusted_set_sender = *` : Exim không thay đổi địa chỉ người gửi trong trường hợmiền. Ý nghĩa của các thông số như:  
 1. `driver = appendfile`: Exim sử dụng phương thức `appendfile` để lưu tệp. Phương thức này sẽ lưu nội dung vào cuối tệp thay vì ghi đè lên tệp hiện tại.
 
 2. `directory = $home/Maildir`: Chỉ định vị trí lưu Mail. Thư sẽ được lưu trong thư mục `Maildir` của người dùng.
