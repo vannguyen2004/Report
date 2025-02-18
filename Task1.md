@@ -74,6 +74,8 @@ Khái niệm về VPS (Virtual Private Server): là một dạng máy chủ ảo
 
 - **Database Hosting**  
    Là dịch vụ mang đến môi trường lưu trữ và quản lý cơ sở dữ liệu thông qua máy chủ hoặc hệ thống máy chủ được cung cấp bởi các đơn vị chuyên về hosting (MySQL, SQL Server, MongoDB).
+  - **Web Hosing**: lưu trữ chuyên biệt dữ liệu Web
+  - **Email Hosting**  
 
 ## 4. Mail
 
