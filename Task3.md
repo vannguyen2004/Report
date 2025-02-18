@@ -95,18 +95,17 @@
    ![Screenshot 2025-02-13 100225](https://github.com/user-attachments/assets/de1434c2-949f-4e9a-b626-d0726f598318)
 
 2. Tải Nginx `dnf install -y nginx `
-   + Cấu hình Reverse Proxy cho Nginx `/etc/nginx/nginx.conf`
+   + Cấu hình Reverse Proxy của Nginx `/etc/nginx/nginx.conf`
      
-   ![Screenshot 2025-02-13 101246](https://github.com/user-attachments/assets/4c534d42-692e-42ca-a402-9cddda788111)
-   
-   + listen: lắng nghe ở port 80 trên IPv4 và IPv6  
-   + server_name: Tên máy chủ mà Nginx sẽ xử lí yêu cầu  
-   + root: Chỉ thị này chỉ định thư mục gốc mà Nginx sẽ sử dụng để tìm các tệp tĩnh khi có yêu cầu từ người dùng  
-   + proxy_redirect off: Nginx là người chung gian và không thay đổi URL được trả về từ backend  
-   + proxy_set_header X-Real-IP $remote_addr: Nginx thêm `X-Real-IP` để gửi yêu cầu tới backend (`X-Real-IP` là địa chỉ IP của Client khi yêu càu đến Nginx)  
-   + proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for: Chỉ thị này thêm header  `X-Forwarded-For` vào yêu cầu gửi đến backend. Đây là một chuỗi các địa chỉ IP được thêm vào từ phía người dùng đến Nginx, giúp backend biết rõ đường đi của yêu cầu qua các proxy.  
-   + proxy_set_header Host $http_host: Head `http_host` được giữ nguyên khi nginx gửi đến backend thông thường sẽ là tên website  
-   + proxy_pass là chỉ thị cơ bản để thiết lập reverse proxy, nơi Nginx đóng vai trò làm "người trung gian", nhận yêu cầu và chuyển tiếp đến một máy chủ khác
+ ![image](https://github.com/user-attachments/assets/73ed33da-f1e6-4964-b0ad-bf425fdadece)
+
+   + `listen`: lắng nghe ở port 80 trên IPv4 và IPv6  
+   + `server_name`: Tên máy chủ mà Nginx sẽ xử lí yêu cầu
+   + `proxy_redirect off`: Nginx là người chung gian và không thay đổi URL được trả về từ backend  
+   + `proxy_set_header X-Real-IP $remote_addr`: Nginx thêm `X-Real-IP` để gửi yêu cầu tới backend (`X-Real-IP` là địa chỉ IP của Client khi yêu càu đến Nginx)  
+   + `proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for`: Chỉ thị này thêm header  `X-Forwarded-For` vào yêu cầu gửi đến backend. Đây là một chuỗi các địa chỉ IP được thêm vào từ phía người dùng đến Nginx, giúp backend biết rõ đường đi của yêu cầu qua các proxy.  
+   + `proxy_set_header Host $http_host`: Head `http_host` được giữ nguyên khi nginx gửi đến backend thông thường sẽ là tên website  
+   + `proxy_pass` là chỉ thị cơ bản để thiết lập reverse proxy, nơi Nginx đóng vai trò làm "người trung gian", nhận yêu cầu và chuyển tiếp đến một máy chủ khác
 
 #### Truy cập trang web với giao thức http ở port 80
 
