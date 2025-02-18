@@ -27,7 +27,7 @@
   Tải repo Epel và exim `dnf installl -y epel-release`   `dnf install -y exim`  
   Thay đổi tập tin cấu hình của exim `/etc/exim/exim.conf`    
    Thêm mới dòng 4 5  
-  + `untrusted_set_sender = * : Exim không thay đổi địa chỉ người gửi trong trường hợp nó không xác minh được địa chỉ từ một nguồn đáng tin  
+  + `untrusted_set_sender = *` : Exim không thay đổi địa chỉ người gửi trong trường hợp nó không xác minh được địa chỉ từ một nguồn đáng tin  
   + `no_local_from_check` : Exim sẽ không kiểm tra và xử lí các thư có địa chỉ là nội bộ (mặc định trust) 
   
 ![Screenshot 2025-02-14 084337](https://github.com/user-attachments/assets/a009dbd6-39a4-404f-8b1b-4838f19272a4)
