@@ -52,14 +52,17 @@
   *Sự khác nhau giữa login và plain là: login gửi username và password có mã hóa còn plain là không mã hóa
   
   **dovecot login**  
-  `driver = dovecot`: Điều này chỉ ra rằng Exim sử dụng Dovecot làm trình xác thực.  
-  `public_name = LOGIN`: Đây là tên phương thức xác thực công khai mà Exim sử dụng trong giao tiếp SMTP. Khi máy khách yêu cầu xác thực, Exim sẽ quảng bá phương thức LOGIN.  
-  `server_socket = /var/run/dovecot/auth-client`: Đây là đường dẫn tới socket của Dovecot (một tập tin đặc biệt dùng để giao tiếp giữa các chương trình). Đây là nơi Exim sẽ kết nối với Dovecot để thực hiện việc xác thực.  
+  `driver = dovecot`: Điều này chỉ ra rằng Exim sử dụng Dovecot làm trình xác thực.
+  
+  `public_name = LOGIN`: Đây là tên phương thức xác thực công khai mà Exim sử dụng trong giao tiếp SMTP. Khi máy khách yêu cầu xác thực, Exim sẽ quảng bá phương thức LOGIN.
+  
+  `server_socket = /var/run/dovecot/auth-client`: Đây là đường dẫn tới socket của Dovecot (một tập tin đặc biệt dùng để giao tiếp giữa các chương trình). Đây là nơi Exim sẽ kết nối với DDovecot để thực hiện việc xác thực.
+  
   `server_set_id = $auth1`: Đây là một cấu hình để chỉ định ID của người dùng sẽ được xác thực. Biến $auth1 chứa thông tin liên quan đến người dùng sẽ được Dovecot xử lý và xác thực.
     
 ![{4F89FC75-C284-4928-AF81-E124436E3791}](https://github.com/user-attachments/assets/e37449f3-64b2-463d-83ee-4f270edd24bc)
 
-+ Kiểm tra cấu hình Exim: `exim -C /etc/exim/exim.conf -bV`
++ Kiểm tra cấu hình Exim: `exim -C /etc/exim/exim.conf -bV`: được sử dụng để kiểm tra và hiển thị thông tin cấu hình của Exim (một MTA - Mail Transfer Agent) trên hệ thống Linux.
   
 ![image](https://github.com/user-attachments/assets/2c6cbb63-d6f7-43cf-8c12-8f9ab16cc780)
 
