@@ -109,7 +109,11 @@
 
 #### Truy cập trang web với giao thức http ở port 80
 
-![Screenshot 2025-02-13 104243](https://github.com/user-attachments/assets/d7a64518-58e1-4b55-a3e3-95e3f01f0716)
+![image](https://github.com/user-attachments/assets/55d71c44-8ddd-4405-88ca-39c64e35f926)
+
+![image](https://github.com/user-attachments/assets/cdb823cc-f084-4cde-85e8-ed6a5512e3d6)
+
+
 
 ---
 ### Stress test và đánh giá trước và sau khi có Nginx reverse LAMP stack
