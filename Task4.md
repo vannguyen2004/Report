@@ -63,8 +63,18 @@
         
 ![image](https://github.com/user-attachments/assets/61094d62-f319-43b4-b887-762a4c690d24) 
 
-+ dovecot_login và dovecot_plan: đây là phương thức xác Exim xác thực dovecot để lấy mail
++ dovecot_login và dovecot_plan: đây là phương thức xác Exim xác thực dovecot để lấy mail  
   *Sự khác nhau giữa login và plain là: login gửi username và password có mã hóa còn plain là không mã hóa
+  **dovecot plain**
+  `driver` = dovecot: Tương tự như trên, Exim sử dụng Dovecot làm trình xác thực.  
+  `public_name` = PLAIN: Đây là tên phương thức xác thực công khai mà Exim sử dụng khi quảng bá phương thức PLAIN trong giao tiếp SMTP. Phương thức PLAIN là một phương thức xác thực đơn giản với tên người dùng và mật khẩu.  
+  `server_socket` = /var/run/dovecot/auth-client: Đường dẫn đến socket của Dovecot, nơi Exim kết nối với Dovecot để thực hiện xác thực.  
+  `server_set_id` = $auth1: Chỉ định ID người dùng, tương tự như trong cấu hình dovecot_login.
+  **dovecot login**
+  `driver` = dovecot: Điều này chỉ ra rằng Exim sử dụng Dovecot làm trình xác thực.
+  `public_name = LOGIN`: Đây là tên phương thức xác thực công khai mà Exim sử dụng trong giao tiếp SMTP. Khi máy khách yêu cầu xác thực, Exim sẽ quảng bá phương thức LOGIN.
+  `server_socket` = /var/run/dovecot/auth-client: Đây là đường dẫn tới socket của Dovecot (một tập tin đặc biệt dùng để giao tiếp giữa các chương trình). Đây là nơi Exim sẽ kết nối với Dovecot để thực hiện việc xác thực.
+  `server_set_id` = $auth1: Đây là một cấu hình để chỉ định ID của người dùng sẽ được xác thực. Biến $auth1 chứa thông tin liên quan đến người dùng sẽ được Dovecot xử lý và xác thực.
   
 ![{4F89FC75-C284-4928-AF81-E124436E3791}](https://github.com/user-attachments/assets/e37449f3-64b2-463d-83ee-4f270edd24bc)
 
