@@ -13,34 +13,23 @@
   - Quản lý file thông qua File Manager.
 - Hoạt động tốt trên **Hệ điều hành Linux** và không được hỗ trợ trên các hệ điều hành khác.
 
-#### Một số tính năng nổi bật của DirectAdmin
+#### Những cấp độ user trong DirectAdmin
 
-- **Tính năng của Administrator**:
-  - Tạo và Sửa Admin và Reseller
-  - Quản lý Reseller Package
-  - Hiển thị tất cả người dùng
-  - Quản lý DNS
-  - Quản lý địa chỉ IP
-  - Quản lý thư hàng chờ
-  - Thông tin hệ thống/dịch vụ
-  - Thống kê sử dụng toàn bộ
-  - DNS Clustering
-  - Công cụ chống thư rác trong DirectAdmin
-  - Cập nhật giấy phép
+- **Administrator**:
+  - Cấp độ user cao nhất của DirectAdmin  
+  - Có quyền chỉnh sửa và thay đổi cấu hình của toàn bộ hệ thống  
+  - Có thể tạo và quản lí Reseller và User  
 
-- **Tính năng của Reseller**:
-  - Tạo / liệt kê / sửa đổi tài khoản
-  - Quản lý gói người dùng
-  - Thống kê Reseller
-  - Gửi tin nhắn đến tất cả người dùng
-  - Nhập / quản lý giao diện
-  - Gán IP
-  - Thông tin hệ thống/dịch vụ
-  - Quản lý tên máy chủ
+- **Reseller**:
+  - Cấp bật sau Administrator  
+  - Chỉ có quyền quản trị và thay đổi cấu hình của nhóm User mà Reseller tạo ra  
+  - Không có quyền can thiệp vào cấu hình của các Reseller khác  
 
-- **Tính năng của User**:
-  - Bao gồm các tính năng cơ bản mà Administrator hoặc Reseller cho phép
-
+- **User**:
+  - Cấp độ có quyền hạn thấp nhất  
+  - Được tạo ra bởi Admin hoặc Reseller  
+  - Chỉ có quyền thay đổi thông tin liên quan đến tài khoản của mình  
+    
 ### Giao diện các tính năng DirectAdmin
 
 Trong **DirectAdmin**, có 6 mục chính như sau:
