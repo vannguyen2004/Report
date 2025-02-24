@@ -40,3 +40,15 @@
 
 - **Tính năng của User**:
   - Bao gồm các tính năng cơ bản mà Administrator hoặc Reseller cho phép
+
+### Kiểm tra giao diện các tính năng DirectAdmin
+  Có 6 mục chính trong DirectAdmin:
+    Bao gồm: 
+      + Account manager: liên quan đến các vấn đề về tài khoản như: tạo tài khoản administrator, thay đổi mật khẩu, tạo reseller, quản lí gói của reseller, list user của admin hoặc Reseller, show all user, di chuyển user qua các reseller
+      + Server Manager quản lí về phía server và các dịch vụ. 
+        + Administrator Setting: Cài đặt của Admin lên toàn bộ hệ thống
+        + Tùy chỉnh cấu hình của các dịch vụ như HTTPD, DNS Administrator, IP Management, Multi Server Set up, PHP config, SSH key
+      + Admin Tool: các công cụ hổ trợ việc quản lí Server như : backup/transfer, brute force monitor, process Monitor, Mail queue, service monitor, system backup, Customize Evolution Skin
+      + System info & File: Thông tin hệ thống và các tập tin: tự động hóa công việc của tất cả user, quản lí file, chỉnh sửa file, thông tin hệ, log, thống kê sử dụng
+      + Extra feature: Các tính năng mở rộng như Webmail (roundCube), phpMyAdmin, Plugin Manager, Security & Firewall, CustomBuild 
+      + Support & help: Help, Manage tickets, Liscensing/update
