@@ -97,21 +97,47 @@ Các công cụ hỗ trợ và giúp đỡ:
 - **Manage Tickets**
 - **Licensing/Update**
 
-### Kiểm tra Webstack trên directadmin
-  Web stack mặt định trên DirectAdmin là LEMP stack
-  Lí do:
-    Ta vào phần Service monitor để xem các dịch vụ đang chạy trên máy 
-    ![image](https://github.com/user-attachments/assets/ee0220c2-0fdb-4c3f-b0f7-feeac5164d7b)
+### Kiểm tra Webstack trên directadmin  
 
-    Ta thấy được các dịch vụ đang chạy bao gồm: SMTP, DirectAdmin, Dovecot, Exim, Httpd, lfd, MySQL, Named, Nginx, PHP-fpm56, Pure_FTP, SSH
-    ![image](https://github.com/user-attachments/assets/ad8c9a7c-8b79-4cac-a4ae-72f0a8411051)
+### Web Stack mặc định trên DirectAdmin là Nginx Reverse Proxy LAMP Stack
 
-    Tuy nhiên ở đây ta thấy có hai dịch vụ Web server đang chạy là Nginx và Apache
-    Để kiểm tra web server nào đang chạy chính ta kiểm tra port thông dụng của web theo giao thức http hoặc https
-    ![image](https://github.com/user-attachments/assets/9a95ec2e-cf1b-4f20-94b2-231b761737c8
-    Hiện tại thì Nginx đang chạy ở port 80 giao thức http  --> Mô hình LEMP stack (Linux, Nginx, MySQL, PHP)
-    - Chúng ta có thể kiểm tra bằng cách truy cập trang web địa chỉ hiện 
-    ![image](https://github.com/user-attachments/assets/5044c7ac-d8ee-48a9-baef-1fcc82651d1e)
+#### Lí do
+Ta vào phần **Service Monitor** để xem các dịch vụ đang chạy trên máy.
+
+![image](https://github.com/user-attachments/assets/ee0220c2-0fdb-4c3f-b0f7-feeac5164d7b)
+
+Ta thấy được các dịch vụ đang chạy bao gồm: 
+- SMTP
+- DirectAdmin
+- Dovecot
+- Exim
+- Httpd
+- lfd
+- MySQL
+- Named
+- Nginx
+- PHP-fpm56
+- Pure_FTP
+- SSH  
+
+![image](https://github.com/user-attachments/assets/ad8c9a7c-8b79-4cac-a4ae-72f0a8411051)
+
+Tuy nhiên, ở đây ta thấy có hai dịch vụ Web server đang chạy là **Nginx** và **Apache**.
+
+Ta kiểm tra tiếp port mà 2 Service Web hiện tại đang chạy
+
+![image](https://github.com/user-attachments/assets/f1d1d7e2-3899-492b-915e-9a54b4351c3a)
+
+
+Hiện tại, Nginx đang chạy ở **port 80 và 443** giao thức **http và https** và **Apache** đang chạy ở 2 port là 8080 và 8081. Khả năng có thể là Mô hình LEMP stack hoặc Nginx Reverse Proxy LAMP stack (Do Nginx đang chạy ở port web thông dụng)  
+Ta kiểm tra file nginx-vhost.conf  
+Ở phần location ta thấy có proxy_pass (Nginx thực hiện chuyển dữ liệu tới backend) -> Nginx có chức năng là Proxy
+![image](https://github.com/user-attachments/assets/3fe66836-b615-48ba-bc75-17affdbd4cee)
+
+![image](https://github.com/user-attachments/assets/dc41435e-8e0e-47ea-833a-4f051160cc27)
+
+
+
 
 
 
