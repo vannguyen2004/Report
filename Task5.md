@@ -129,12 +129,19 @@ Ta kiểm tra tiếp port mà 2 Service Web hiện tại đang chạy
 ![image](https://github.com/user-attachments/assets/f1d1d7e2-3899-492b-915e-9a54b4351c3a)
 
 
-  Hiện tại, Nginx đang chạy ở **port 80 và 443** giao thức **http và https** và **Apache** đang chạy ở 2 port là 8080 và 8081. Khả năng có thể là Mô hình LEMP stack hoặc Nginx Reverse Proxy LAMP stack (Do Nginx đang chạy ở port web thông dụng)  
-  Ta kiểm tra file nginx-vhost.conf  
+  - Hiện tại, Nginx đang chạy ở **port 80 và 443** giao thức **http và https** và **Apache** đang chạy ở 2 port là 8080 và 8081. Khả năng có thể là Mô hình LEMP stack hoặc Nginx Reverse Proxy LAMP stack (Do Nginx đang chạy ở port web thông dụng)  
+  - Ta kiểm tra file nginx-vhost.conf  
   Ở phần location ta thấy có proxy_pass (Nginx thực hiện chuyển dữ liệu tới backend) -> Nginx có chức năng là Proxy
 ![image](https://github.com/user-attachments/assets/3fe66836-b615-48ba-bc75-17affdbd4cee)
 
 ![image](https://github.com/user-attachments/assets/dc41435e-8e0e-47ea-833a-4f051160cc27)
+
+Cách nhanh hơn là ở phần Server Manager chỉ có phầm Custom HTTPD configurations mà không có nhắc gì đến Nginx. Khi nhấp vào thì ta thấy conf. file là httpd.conf nginx proxy
+
+![image](https://github.com/user-attachments/assets/27f7625c-5f23-4058-8f8a-9bc76813cea0)
+
+![image](https://github.com/user-attachments/assets/ec1a5d95-e70a-45fe-985e-6bce0f080559)
+
 
 
 
