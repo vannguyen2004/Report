@@ -129,9 +129,9 @@ Ta kiểm tra tiếp port mà 2 Service Web hiện tại đang chạy
 ![image](https://github.com/user-attachments/assets/f1d1d7e2-3899-492b-915e-9a54b4351c3a)
 
 
-Hiện tại, Nginx đang chạy ở **port 80 và 443** giao thức **http và https** và **Apache** đang chạy ở 2 port là 8080 và 8081. Khả năng có thể là Mô hình LEMP stack hoặc Nginx Reverse Proxy LAMP stack (Do Nginx đang chạy ở port web thông dụng)  
-Ta kiểm tra file nginx-vhost.conf  
-Ở phần location ta thấy có proxy_pass (Nginx thực hiện chuyển dữ liệu tới backend) -> Nginx có chức năng là Proxy
+  Hiện tại, Nginx đang chạy ở **port 80 và 443** giao thức **http và https** và **Apache** đang chạy ở 2 port là 8080 và 8081. Khả năng có thể là Mô hình LEMP stack hoặc Nginx Reverse Proxy LAMP stack (Do Nginx đang chạy ở port web thông dụng)  
+  Ta kiểm tra file nginx-vhost.conf  
+  Ở phần location ta thấy có proxy_pass (Nginx thực hiện chuyển dữ liệu tới backend) -> Nginx có chức năng là Proxy
 ![image](https://github.com/user-attachments/assets/3fe66836-b615-48ba-bc75-17affdbd4cee)
 
 ![image](https://github.com/user-attachments/assets/dc41435e-8e0e-47ea-833a-4f051160cc27)
