@@ -4,8 +4,8 @@
 - **VPS giá rẻ**: miễn phí từ `cheap-SSD2` trở lên (SSD1 có phí)
 - **VPS cao cấp**: tất cả các gói
 - **VPS NVME**: tất cả các gói
-- **VPS MMO, Minecraft và GPU**: không có DirectAdmin
-  *Tuy nhiên những bản DirectAdmin là bản no lisence (lisence shared), vẫn khyến khích khách hàng sử dụng bản có lisence.  
+- **VPS MMO, Minecraft và GPU**: không có DirectAdmin  
+  *Tuy nhiên những bản DirectAdmin là bản no lisence (lisence shared), vẫn khyến khích khách hàng sử dụng bản có lisence.*  
 ### Tìm hiểu sơ qua về DirectAdmin
 - **DirectAdmin** là một công cụ quản lý web hosting (tương tự như cPanel, Flesk, aaPanel,...). So với các công cụ khác như cPanel, công cụ quản lý này được đánh giá là nhẹ, tiết kiệm tài nguyên và dễ sử dụng.
 - Hỗ trợ nhiều ngôn ngữ, cả tiếng Việt. Nó cung cấp nhiều tính năng như:
