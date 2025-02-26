@@ -12,7 +12,7 @@
   - Quản lý domain, DNS, FTP, MySQL
   - Tạo email theo tên miền, SSH, SSL
   - Quản lý file thông qua File Manager.
-- Hoạt động tốt trên **Hệ điều hành Linux** và không được hỗ trợ trên các hệ điều hành khác.
+- Hoạt động tốt trên **Hệ điều hành Linux** và không hỗ trợ trên hệ điều hành windows.
 
 #### Những cấp độ user trong DirectAdmin
 - **Administrator**:
