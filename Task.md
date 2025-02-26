@@ -47,7 +47,7 @@
 
 
 ### Log file Exim
-
+- Dùng lệnh  `grep "1tnC0h-0000CY-OZ" /var/log/exim/mainlog`  
 ```log
 2025-02-26 14:39:16 1tnCOh-0000CY-Oz <= nguyen1@project2.nguyenhv.id.vn H=(49157.vpsvinahost.vn) [127.0.0.1] P=esmtpa A=login:nguyen1@project2.nguyenhv.id.vn S=623 id=56fd56b49ecb6484906f915b6e8445c5@project2.nguyenhv.id.vn T="TEST" from <nguyen1@project2.nguyenhv.id.vn> for nguyen3@project2.nguyenhv.id.vn
 ```
@@ -83,6 +83,8 @@
 - **Trạng thái:** `Completed`
 
 ### Log file Dovecot
+
+Dùng lệnh grep "nguyen3@project2.nguyenhv.id.vn" /var/log/maillog
 
 ```log
 Feb 26 14:39:56 49157 dovecot[834]: imap-login: Login: user=<nguyen3@project2.nguyenhv.id.vn>, method=PLAIN, rip=127.0.0.1, lip=127.0.0.1, mpid=836, secured, session=<e5MLrgYvcMZ/AAAB>
