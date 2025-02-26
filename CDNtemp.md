@@ -86,7 +86,5 @@ Thay vì yêu cầu lại đối tượng từ máy chủ gốc, cache sẽ:
 Để chỉ ra phiên bản mà khách hàng (cache) có, nó sẽ thêm một tiêu đề:  
 - **If-Not-Modified-Since** hoặc **If-None-Match**.  
   - Vậy thì với max-age thì sẽ chỉ thị thời gian hiệu lực của dữ liệu. Khi Server gửi dữ liệu nó sẽ gửi thêm một header `Last Modified: <timestamp>, chỉ thời điểm tài nguyên được cập nhật lần cuối.  
-  - Khi client yêu cầu thì nó sẽ gửi `if-modified-since: <timestamp>  nếu như không có thay đổi gì thì server sẽ trả về 304 NOT MODIFIED còn nếu thay đổi thì 200 OK với nội dung mới.
-  - Còn `If-None-Match`: thì server origin sẽ gửi kèm theo một Etag header (ETag là giá trị duy nhất mà server gán cho một tài nguyên để xác định phiên bản của nó) để xác định duy nhất phản hồi đó. Sau đó khách hàng có thể sử dụng ETag đó trong yêu cầu kiểm tra lại để kiểm tra xem ETag của nội dung có bị thay đổi không bằng If-None-Match
-  -  
-  - 
+  - Khi client yêu cầu thì nó sẽ gửi `if-modified-since: <timestamp>  nếu như không có thay đổi gì thì server sẽ trả về 304 NOT MODIFIED còn nếu thay đổi thì 200 OK với nội dung mới.  
+  - Còn `If-None-Match`: thì server origin sẽ gửi kèm theo một Etag header (ETag là giá trị duy nhất mà server gán cho một tài nguyên để xác định phiên bản của nó) để xác định duy nhất phản hồi đó. Sau đó khách hàng có thể sử dụng ETag đó trong yêu cầu kiểm tra lại để kiểm tra xem ETag của nội dung có bị thay đổi không bằng `If-None-Match`
