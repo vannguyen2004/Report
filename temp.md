@@ -88,12 +88,41 @@
 Feb 26 14:39:56 49157 dovecot[834]: imap-login: Login: user=<nguyen3@project2.nguyenhv.id.vn>, method=PLAIN, rip=127.0.0.1, lip=127.0.0.1, mpid=836, secured, session=<e5MLrgYvcMZ/AAAB>
 ```
 
-- **Thời gian:** `Feb 26 14:39:56`
-- **Người dùng:** `nguyen3@project2.nguyenhv.id.vn`
-- **Phương thức xác thực:** `PLAIN` (mật khẩu không mã hóa trong giao thức IMAP nhưng có SSL/TLS bảo mật)
-- **Địa chỉ IP client:** `127.0.0.1`
-- **Địa chỉ IP server:** `127.0.0.1`
-- **Session ID:** `<e5MLrgYvcMZ/AAAB>`
+
+- **Ngày giờ**: Feb 26 14:39:56  
+  Đây là thời điểm xảy ra sự kiện, cụ thể là ngày 26 tháng 2, 14 giờ 39 phút 56 giây (theo giờ hệ thống).
+
+- **49157**:  
+  Đây là hostname của máy chủ chạy dịch vụ Dovecot. Trong trường hợp này, 49157 có thể là tên máy hoặc một định danh nội bộ.
+
+- **dovecot[834]**:  
+  Dịch vụ Dovecot đang chạy với process ID (PID) là 834. Đây là tiến trình chính của Dovecot trên máy chủ.
+
+- **imap-login: Login**:  
+  Chỉ ra rằng đây là sự kiện đăng nhập vào dịch vụ IMAP.
+
+- **user=<nguyen3@project2.nguyenhv.id.vn>**:  
+  Tên người dùng đăng nhập là nguyen3@project2.nguyenhv.id.vn. Đây thường là địa chỉ email hoặc định danh của người dùng trong hệ thống mail.
+
+- **method=PLAIN**:  
+  Phương thức xác thực được sử dụng là PLAIN, tức là mật khẩu được gửi dưới dạng văn bản thuần (không mã hóa trong chính giao thức IMAP). Tuy nhiên, vì có trường `secured` (xem bên dưới), kết nối có thể đã được mã hóa qua SSL/TLS.
+
+- **rip=127.0.0.1**:  
+  Địa chỉ IP của client (remote IP) là 127.0.0.1, tức là localhost. Điều này cho thấy client đang chạy trên cùng máy chủ với Dovecot, có thể là một ứng dụng hoặc script nội bộ.
+
+- **lip=127.0.0.1**:  
+  Địa chỉ IP của server (local IP) cũng là 127.0.0.1, xác nhận đây là kết nối nội bộ giữa client và server trên cùng một máy.
+
+- **mpid=836**:  
+  Đây là PID của tiến trình IMAP cụ thể xử lý phiên đăng nhập này. Mỗi phiên IMAP sẽ có một tiến trình riêng để quản lý.
+
+- **secured**:  
+  Kết nối được bảo mật, có thể qua SSL/TLS. Điều này đảm bảo rằng dù phương thức xác thực là PLAIN, thông tin đăng nhập vẫn được mã hóa khi truyền qua mạng.
+
+- **session=<e5MLrgYvcMZ/AAAB>**:  
+  Đây là mã phiên (session ID) duy nhất được gán cho phiên IMAP này. Nó giúp theo dõi phiên trong các log liên quan.
+
+#### Dòng thứ hai: Ngắt kết nối IMAP
 
 ---
 
@@ -101,17 +130,44 @@ Feb 26 14:39:56 49157 dovecot[834]: imap-login: Login: user=<nguyen3@project2.ng
 Feb 26 14:39:56 49157 dovecot[834]: imap(nguyen3@project2.nguyenhv.id.vn)<836><e5MLrgYvcMZ/AAAB>: Disconnected: Logged out in=469 out=2105 deleted=0 expunged=0 trashed=0 hdr_count=1 hdr_bytes=391 body_count=1 body_bytes=31
 ```
 
-- **Người dùng:** `nguyen3@project2.nguyenhv.id.vn`
-- **Số email đã xem:** `1`
-- **Kích thước tiêu đề email:** `391 bytes`
-- **Kích thước nội dung email:** `31 bytes`
-- **Phiên IMAP kết thúc với trạng thái:** `Logged out`
+
+- **imap(nguyen3@project2.nguyenhv.id.vn)**:  
+  Chỉ ra rằng đây là phiên IMAP của người dùng nguyen3@project2.nguyenhv.id.vn.
+
+- **<836>**:  
+  PID của tiến trình IMAP xử lý phiên này là 836, trùng với `mpid` trong dòng đăng nhập.
+
+- **<e5MLrgYvcMZ/AAAB>**:  
+  Session ID của phiên này, khớp với dòng đăng nhập, dùng để liên kết hai sự kiện (đăng nhập và đăng xuất).
+
+- **Disconnected: Logged out**:  
+  Phiên IMAP đã bị ngắt kết nối với lý do `Logged out`. Điều này có nghĩa là client đã gửi lệnh LOGOUT để chủ động kết thúc phiên.
+
+- **in=469**:  
+  Tổng số byte dữ liệu được gửi từ client đến server trong phiên này là 469 byte. Đây là dữ liệu của các lệnh IMAP mà client thực hiện.
+
+- **out=2105**:  
+  Tổng số byte dữ liệu được gửi từ server đến client là 2105 byte. Đây là dữ liệu của các phản hồi từ server (ví dụ: nội dung email, header...).
+
+- **deleted=0**:  
+  Số email bị đánh dấu xóa trong phiên này là 0. Người dùng không thực hiện lệnh xóa email nào.
+
+- **expunged=0**:  
+  Số email bị xóa vĩnh viễn (expunged) là 0. Trong IMAP, lệnh EXPUNGE được dùng để xóa hoàn toàn email đã bị đánh dấu xóa, nhưng không có hành động này trong phiên.
+
+- **trashed=0**:  
+  Số email được di chuyển vào thùng rác là 0. Không có email nào bị chuyển vào thư mục "Trash".
+
+- **hdr_count=1**:  
+  Số lượng header email được tải trong phiên là 1. Client đã yêu cầu thông tin header của một email.
+
+- **hdr_bytes=391**:  
+  Tổng kích thước của header email được tải là 391 byte.
+
+- **body_count=1**:  
+  Số lượng phần thân (body) email được tải là 1. Client đã yêu cầu nội dung của một email.
+
+- **body_bytes=31**:  
+  Tổng kích thước của phần thân email được tải là 31 byte.
 
 ---
-
-## Kết luận
-- Email đã được tạo thành công trên **DirectAdmin**.
-- Người dùng có thể đăng nhập vào **Webmail Roundcube** để gửi và nhận email.
-- Email gửi đi được ghi nhận trong **log của Exim**.
-- Email nhận được và tải về được ghi nhận trong **log của Dovecot**.
-- Mọi quá trình gửi/nhận email đều hoạt động bình thường.
