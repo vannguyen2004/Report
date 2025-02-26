@@ -59,6 +59,7 @@
 - **Host gửi:** `49157.vpsvinahost.vn` (IP `127.0.0.1` - localhost)
 - **Phương thức gửi:** `esmtpa` (SMTP có xác thực)
 - **Xác thực với tài khoản:** `nguyen1@project2.nguyenhv.id.vn`
+- **Message ID:** 56fd56b49ecb6484906f915b6e8445c5@project2.nguyenhv.id.vn  
 - **Kích thước email:** `623 bytes`
 - **Tiêu đề:** `TEST`
 - **Người nhận:** `nguyen3@project2.nguyenhv.id.vn`
