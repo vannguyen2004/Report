@@ -43,6 +43,9 @@
 - Lấy thông tin **Message ID** và tìm kiếm trong log của **Exim** và **Dovecot**.
 - **Message ID**: `1tnC0h-0000CY-OZ`
 
+![417039624-c270f674-7985-4b77-8d79-08f5204023eb](https://github.com/user-attachments/assets/beba111b-adf3-4648-b619-8f68483605da)
+
+
 ### Log file Exim
 
 ```log
