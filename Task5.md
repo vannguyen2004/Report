@@ -96,7 +96,7 @@ Các công cụ hỗ trợ và giúp đỡ:
 - **Manage Tickets**
 - **Licensing/Update**
 
-Tuy nhiên, mỗi Level thì người dùng sẽ có khác biệt về giao diện cũng như tính năng.
+***Tuy nhiên, mỗi Level thì người dùng sẽ có khác biệt về giao diện cũng như tính năng.***
 
 ### Kiểm tra Webstack trên DirectAdmin  
 
