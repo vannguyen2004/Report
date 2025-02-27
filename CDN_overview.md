@@ -63,9 +63,23 @@ Mặc dù tên của một Cache Group phải là duy nhất, nhưng đây là �
 ### Latitude
 Vĩ độ địa từ của Cache Group được sử dụng trong định tuyến và cho mục đích Dự phòng theo khoảng cách gần nhất (Fallback to Closest).  
 ### Localization Methods
- Các phương thức định vị của một nhóm Cache xác định các để Traffic Router được phép định tuyến khách hnagf đến các máy chủ Cache trong nhóm. Đây là phương thức đươc cho phép và cacs giá trị trong tập hợp này bị giới hạn bởi các giá trị sau:
+ Các phương thức định vị của một nhóm Cache xác định các để Traffic Router được phép định tuyến khách hàng đến các máy chủ Cache trong nhóm. Đây là phương thức đươc cho phép và cacs giá trị trong tập hợp này bị giới hạn bởi các giá trị sau: (
    Coverage Zone File: Cho phép các Traffic Router định tuyến khách hàng đến Cache Group nếu địa chỉ IP của họ được gán ví trí địa lí bằng cách tra cứu trong Coverage Zone File.  
     Deep Coverage Zone File: giống như Coverage Zone File, tuy nhiên tùy chọn này không có bất kì tác dụng nào. DO đó , nó ẽ không xuất hiện trong các biểu mẫu của Traffic Portal.  
     Geo-IP database: Cho phép Traffic Router định tuyến khách hàng đến nhóm Cache này nếu địa chỉ IP của ho được tra cứu trong cơ sở dữ liệu anh xạ địa chỉ IP với vị trí địa lý , nhằm xác định vị trí địa lý của khách hàng
+### Longitude (vĩ độ)
+### Name
+Tên unique cho Cache Group
+### Parent
+Cache Group có thể là cha của Cache Group. Nó có nghĩa khác nhau dựa vào Cache  `type`. EDGE_LOC phải có Cache group cha là MID_LOG
+ EDGE_LOC: Cache Server ở biên
+ MID_LOC: Cache Server ở trung gian 
+ MID_LOG phải  có Cache Server ORG_LOC. Nếu MID_LOG không có cha hay toàn có cha nhưng không phải và ORG_LOG thì tất cả các nhóm G_LOG (thậm chí khác CDN) sẽ được coi là cha của nó.
+ Secondary Parent:
+Secondary Parent của Cache group được sử dụng trong fallback dùng để dữ phòng các Cache Server với nhau (sau khi quá trình định tuyến diễn ra khác Fallback và Fallback to Closest
+### Server
+ Mỗi Mục đích chính của một Cache Group là chứa các máy chủ. Trong hầu hết các trường hợp, người ta ngầm hiểu hoặc giả định rằng các máy chủ này là cache servers, nhưng điều này không bắt buộc. Trên thực tế, không hiếm trường hợp các máy chủ bên trong một Cache Group thuộc loại khác.
+ Mỗi cache group có thể không hoặc nhiều máy chủ gán vào nó nhưng mỗi máy chủ chỉ được ở trong một cache group
+ 
     
 
