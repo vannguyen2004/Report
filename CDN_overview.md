@@ -78,8 +78,46 @@ Cache Group có thể là cha của Cache Group. Nó có nghĩa khác nhau dựa
  Secondary Parent:
 Secondary Parent của Cache group được sử dụng trong fallback dùng để dữ phòng các Cache Server với nhau (sau khi quá trình định tuyến diễn ra khác Fallback và Fallback to Closest
 ### Server
+
  Mỗi Mục đích chính của một Cache Group là chứa các máy chủ. Trong hầu hết các trường hợp, người ta ngầm hiểu hoặc giả định rằng các máy chủ này là cache servers, nhưng điều này không bắt buộc. Trên thực tế, không hiếm trường hợp các máy chủ bên trong một Cache Group thuộc loại khác.
  Mỗi cache group có thể không hoặc nhiều máy chủ gán vào nó nhưng mỗi máy chủ chỉ được ở trong một cache group
+
+# Delivery Service Request
+
+**Delivery Service Request** trong CDN là một yêu cầu để tạo hoặc thay đổi một **Delivery Service** - một cấu hình điều hướng lưu lượng của CDN để phân phối nội dung đến người dùng cuối (bao gồm tạo mới DSR, xóa, chỉnh sửa).
+
+## Cấu trúc của DSR trong phiên bản mới nhất của Traffic Óp API và Typescript Interface
+
+- **Assignee**: chỉ định tên người dùng của người dùng được chỉ định trong. Nó có thể được để trống nếu không gán cho bất kỳ DSR nào.
+- **Author**: là username của người tạo DSR.
+- **Change Type**: chuỗi biểu thị hành động sẽ thực hiện trong sự kiện của DSR được đáp ứng. Bao gồm:
+  - **Create**: New Delivery Service Request sẽ được tạo.
+  - **Delete**: xóa.
+  - **Update**: chỉnh sửa Delivery hiện tại.
+- **Created At**: Đây là ngày giờ mà DSR được tạo.
+- **ID**: định danh duy nhất cho DSR.
+- **Last Edited By**: username người cuối cùng chỉnh sửa DSR.
+- **Original**: Nếu thuộc tính này của DSR tồn tại thì nó đại diện cho DSR ban đầu trước khi DSR đã/được/đang thực hiện. Thuộc tính này chỉ tồn tại trên các DSR có **Change Type** là **Update** và **Delete**.
+
+  **Lưu ý**: `original` là thuộc tính trong DSR, dùng để lưu trữ bản sao đầy đủ của Delivery Service trước khi có sự thay đổi.
+  
+  - Chỉ xuất hiện khi **Change Type** là **update** hoặc **delete**, giúp hệ thống ghi nhớ thông tin trước khi áp dụng thay đổi.
+    - ✅ Nếu **Change Type** = "update", `original` chứa dữ liệu trước khi cập nhật.
+    - ✅ Nếu **Change Type** = "delete", `original` chứa dữ liệu của Delivery Service trước khi bị xóa.
+    - ✅ Nếu **Change Type** = "create", `original` không tồn tại vì không có gì trước đó.
+
+- **Request**: là thuộc tính trong DSR, chứa thông tin của **Delivery Service** mà người dùng muốn tạo hoặc cập nhật.
+
+  **Lưu ý**: Chỉ xuất hiện khi **Change Type** là **update** hoặc **create**, giúp hệ thống biết được thông tin mới mà người dùng muốn áp dụng.
+  
+  - ✅ Nếu **Change Type** = "update", `requested` chứa dữ liệu sau khi cập nhật.
+  - ✅ Nếu **Change Type** = "create", `requested` chứa dữ liệu của Delivery Service mới cần tạo.
+  - ✅ Nếu **Change Type** = "delete", `requested` không tồn tại vì không có gì để thay thế.
+
+
+
+ 
+ 
  
     
 
