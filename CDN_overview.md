@@ -115,6 +115,23 @@ Secondary Parent của Cache group được sử dụng trong fallback dùng đ�
   - ✅ Nếu **Change Type** = "delete", `requested` không tồn tại vì không có gì để thay thế.
 
 
+**Status**: Trạng thái là một chuỗi ký tự cho biết vị trí của một DSR trong vòng đời quy trình công việc DSR. Thông thường, một DSR có thể ở trạng thái “mở” (open), có nghĩa là nó có thể được chỉnh sửa, xem xét và có thể hoàn thành hoặc bị từ chối, hoặc ở trạng thái “đóng” (closed), có nghĩa là nó đã được hoàn thành hoặc bị từ chối. Cụ thể hơn, các DSR ở trạng thái “mở” có một trong các trạng thái sau:
+
+ - Dự thảo (draft): DSR chưa sẵn sàng để hoàn thành hoặc xem xét có thể dẫn đến việc từ chối, vì nó vẫn đang được làm việc tích cực.
+
+ - Đã gửi (submitted): DSR đã được gửi đi để xem xét, nhưng chưa được xem xét.
+
+ - Trong khi đó, một DSR ở trạng thái “đóng” có một trong các trạng thái sau:
+
+ - Hoàn thành (complete): DSR đã được phê duyệt và hành động đã tuyên bố được thực hiện.
+
+ - Đang chờ (pending): DSR đã được phê duyệt và các thay đổi đã được áp dụng, nhưng cấu hình mới chưa được phân phát đến các thành phần khác của ATC - thường có nghĩa là nó không thể được coi là hoàn thành cho đến khi một Snapshot được thực hiện hoặc một Queue Update được thực hiện.
+
+ - Bị từ chối (rejected): DSR đã bị từ chối và đóng lại; nó không thể được hoàn thành.
+
+ - Một DSR ở trạng thái “đóng” không thể được chỉnh sửa - ngoại trừ việc thay đổi trạng thái “đang chờ” thành “hoàn thành” hoặc “bị từ chối”.
+
+
 
  
  
