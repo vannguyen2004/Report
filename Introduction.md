@@ -7,4 +7,15 @@ Traffic Porttal: là giao diện web sử dụng Traffic Ops API để trình b�
 Traffic Vault: được sử dụng lưu trử SSL private key 
 # Content Invalidation Jobs:
 Thay vì để dữ liệu trong cache là không hợp lệ theo các thông thường thì ta có thể áp đặt Policy để áp đặt chính sách là không hợp lệ. Đôi khi có những dữ liệu khi thay đổi Origin cần thông báo tới các cache server để thông báo rằng dữ liệu cần thay đổi thay vì phải đợi theo max-age nhưng thông thường.
+  - Một số thành phần của Content Invalidaiton Job
+    Asset URL: URL của nội dung (asset) mà bạn muốn xóa hoặc làm mất hiệu lực khỏi bộ nhớ cache của CDN. Như /images/logo.png, /css/style.css, /api/data.json
+    Create By: Tên người hoặc hệ thống đã tạo yêu cầu invalidation.
+    Delivery Service: Tên của dịch vụ CDN chịu trách nhiệm phân phối nội dung mà bạn muốn làm mất hiệu lực
+    ID: Mã định danh duy nhất của Content Invalidation Job
+    Invalidation Type: Xác định loại invalidation mà bạn đang thực hiện. Invalidate – Đánh dấu nội dung trong cache là hết hạn (stale), CDN sẽ lấy nội dung mới từ origin server khi có request tiếp theo. Purge – Xóa hoàn toàn nội dung khỏi cache ngay lập tức.
+    Refresh: Khi bật tùy chọn refresh, CDN sẽ tự động lấy lại nội dung từ origin server và cập nhật vào cache ngay lập tức.
+    Refetch:  CDN chủ động gửi yêu cầu đến origin server để lấy nội dung mới và thay thế trong cache.
+    Regular Expression:  Cho phép sử dụng biểu thức chính quy để xóa nhiều nội dung cùng lúc.
+    Start Time: Thời điểm bắt đầu thực hiện Content Invalidation Job.
+    
 
