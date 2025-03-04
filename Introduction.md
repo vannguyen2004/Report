@@ -181,6 +181,42 @@ Traffic Stats có hai chức năng chính:
 Thu thập số liệu thống kê cho các máy chủ cache ở tầng biên (Edge-tier) và các Dịch vụ Phân phối (Delivery Services) theo khoảng thời gian có thể cấu hình (mặc định là 10 giây), rồi lưu trữ trong InfluxDB hoặc Kafka.
 Tóm tắt số liệu thống kê hàng ngày (khoảng nửa đêm UTC), tạo báo cáo hàng ngày chứa băng thông tối đa (Max Gbps Served) và tổng số byte đã phục vụ (Total Bytes Served).
 
+Traffic Stats giúp lưu trữ và phân loại dữ liệu thống kê liên quan đến hệ thống CDN. Cụ thể:
+
+cache_stats theo dõi hiệu suất của từng máy chủ cache, giúp quản trị viên biết được lưu lượng băng thông, số lượng kết nối khách hàng, và nhóm cache mà máy chủ thuộc về.
+deliveryservice_stats giám sát hiệu suất của từng dịch vụ phân phối nội dung (Delivery Service), đo lường lưu lượng và số lượng phản hồi HTTP theo từng nhóm mã trạng thái (2xx, 3xx, 4xx, 5xx).
+daily_stats tổng hợp dữ liệu mỗi ngày để tạo báo cáo về băng thông cao nhất và tổng dữ liệu đã phục vụ.
+
+
+# Traffic Vault
+Traffic Vault is a data store used for storing the following types of sensitive information:
+
+SSL Certificates
+
+Private Key
+
+Certificate
+
+CSR
+
+DNSSEC Keys
+
+Key Signing Key
+
+private key
+
+public key
+
+Zone Signing Key
+
+private key
+
+public key
+
+URL Signing Keys
+
+As the name suggests, Traffic Vault is meant to be a “vault” of private keys that only certain users are allowed to access. In order to create, add, and retrieve keys a user must have administrative privileges. Keys can be created via the Traffic Portal UI, but they can only be retrieved via the Traffic Ops API. Currently, the supported data stores used by Traffic Vault are PostgreSQL and Riak (deprecated). Support for Riak may be removed in a future release.
+
 
 
 
