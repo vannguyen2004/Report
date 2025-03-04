@@ -173,8 +173,13 @@ HTTP Content Routing:
 Đối với Dịch vụ phân phối HTTP, máy khách có thể nhận được URL như http://video.demo1.mycdn.ciab.test/. LDNS giải quyết video.demo1.mycdn.ciab.test này thành một địa chỉ IP, nhưng trong trường hợp này, Traffic Router trả về địa chỉ IP của riêng nó. Máy khách mở kết nối đến cổng 80 (HTTP) hoặc cổng 443 (HTTPS) trên địa chỉ IP của Traffic Router và gửi yêu cầu của nó.
 
 
+# Traffic Stats
+Traffic Stats là một chương trình được viết bằng Go, dùng để thu thập và lưu trữ số liệu thống kê về các CDN (Mạng phân phối nội dung) do Traffic Control quản lý. Traffic Stats lấy dữ liệu từ API của Traffic Monitor và lưu trữ trong InfluxDB hoặc Kafka. Dữ liệu thường được lưu trong InfluxDB trong thời gian ngắn (dưới 30 ngày), trong khi dữ liệu Kafka có sẵn để tiêu thụ dựa trên thời gian lưu trữ được cấu hình
 
+Traffic Stats có hai chức năng chính:
 
+Thu thập số liệu thống kê cho các máy chủ cache ở tầng biên (Edge-tier) và các Dịch vụ Phân phối (Delivery Services) theo khoảng thời gian có thể cấu hình (mặc định là 10 giây), rồi lưu trữ trong InfluxDB hoặc Kafka.
+Tóm tắt số liệu thống kê hàng ngày (khoảng nửa đêm UTC), tạo báo cáo hàng ngày chứa băng thông tối đa (Max Gbps Served) và tổng số byte đã phục vụ (Total Bytes Served).
 
 
 
